@@ -1,0 +1,38 @@
+{
+  "name": "SwiftDrome",
+  "identifier": "com.acealone.swiftdrome-source",
+  "subtitle": "A SwiftUI client for Navidrome and Subsonic-API music servers.",
+  "description": "SwiftDrome is an iOS client for Subsonic-API-compatible music servers (primarily Navidrome), built with SwiftUI and Apple's Liquid Glass design language.\n\nLog in to your own Navidrome/Subsonic server and browse your library: artists, albums, playlists, genres, and search. Stream playback with a queue engine that keeps a user-controlled \"Play Next\" stack separate from the main queue, plus favorites and back-skip history.\n\nThis source publishes unsigned .ipa builds automatically whenever a change is released, so the version here should always track the latest build.",
+  "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
+  "headerURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/header.png",
+  "website": "https://github.com/acealone/swiftdrome-app",
+  "tintColor": "0a84ff",
+  "apps": [
+    {
+      "name": "SwiftDrome",
+      "bundleIdentifier": "com.acealone.SwiftDrome",
+      "developerName": "acealone",
+      "subtitle": "A SwiftUI client for Navidrome and Subsonic-API music servers.",
+      "localizedDescription": "SwiftDrome is an iOS client for Subsonic-API-compatible music servers (primarily Navidrome), built with SwiftUI and Apple's Liquid Glass design language.\n\nLog in to your own Navidrome/Subsonic server and browse your library: artists, albums, playlists, genres, and search. Stream playback with a queue engine that keeps a user-controlled \"Play Next\" stack separate from the main queue, plus favorites and back-skip history.\n\nThis .ipa is unsigned and built straight from the main branch, so it needs to be sideloaded (AltStore, SideStore, LiveContainer, etc.) rather than installed from the App Store.",
+      "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
+      "tintColor": "0a84ff",
+      "category": "Music",
+      "version": "0.0.0",
+      "versionDate": "2026-07-30",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.0.0/SwiftDrome-0.0.0.ipa",
+      "versionDescription": "Repository initialized. The first automated build will replace this placeholder entry.",
+      "size": 0,
+      "versions": [
+        {
+          "version": "0.0.0",
+          "date": "2026-07-30",
+          "localizedDescription": "Repository initialized. The first automated build will replace this placeholder entry.",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.0.0/SwiftDrome-0.0.0.ipa",
+          "size": 0
+        }
+      ],
+      "beta": false
+    }
+  ],
+  "news": []
+}
