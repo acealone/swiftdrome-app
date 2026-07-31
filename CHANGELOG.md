@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-07-31
+
+- Fixed the Search tab's cancel button sometimes not appearing, which could leave you unable to switch away from Search.
+- Hid the miniplayer's skip button when the tab bar is minimized, so it doesn't feel cramped in the compact layout.
+
 ## [0.2.1] - 2026-07-31
 
 - Fixed a crash that could occur when starting a stream while artwork was loading.
