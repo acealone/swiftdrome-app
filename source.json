@@ -24,6 +24,14 @@
       "size": 0,
       "versions": [
         {
+          "version": "0.2.0",
+          "date": "2026-07-31T19:32:48Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.2.0/SwiftDrome.ipa",
+          "size": 2437965,
+          "localizedDescription": "Release 0.2.0",
+          "minOSVersion": "17.0"
+        },
+        {
           "version": "0.1.0",
           "date": "2026-07-30T22:04:00Z",
           "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.1.0/SwiftDrome.ipa",
