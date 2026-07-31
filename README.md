@@ -1,40 +1,17 @@
-# SwiftDrome
+# SwiftDrome Source
 
-SwiftDrome is an iOS client for Subsonic-API-compatible music servers (primarily
-[Navidrome](https://www.navidrome.org/)), built with SwiftUI and Apple's Liquid
-Glass design language.
+An AltStore/SideStore-compatible app source for SwiftDrome, a native iOS Subsonic/OpenSubsonic client.
 
-This repository is the **public release channel** for SwiftDrome. It does not
-contain the app's source code — it hosts:
+## Adding this source
 
-- unsigned `.ipa` builds, published automatically as GitHub Releases whenever
-  a change lands on the main development branch
-- [`CHANGELOG.md`](CHANGELOG.md), updated alongside each release
-- [`source.json`](source.json), an [AltStore](https://faq.altstore.io/)-compatible
-  source so SwiftDrome can be installed and updated through AltStore/SideStore
+Add the following URL to your sideloading client (AltStore, SideStore, LiveContainer, etc.):
 
-## Installing
+```
+https://raw.githubusercontent.com/acealone/swiftdrome-app/main/source.json
+```
 
-1. Copy this source URL:
+## About the builds
 
-   ```
-   https://raw.githubusercontent.com/acealone/swiftdrome-app/main/source.json
-   ```
+Builds are unsigned `.ipa`s built from the private SwiftDrome source repo and published here as GitHub Release assets on each tagged version -- no Apple Developer account or signing involved. Suitable for sideloading tools that don't require a valid Apple signature.
 
-2. In AltStore or SideStore, go to **Sources → Add Source** and paste the URL.
-3. Find SwiftDrome in the source and install it.
-
-Because the `.ipa` is unsigned, it must be sideloaded (AltStore, SideStore,
-LiveContainer, or similar) — it is not available on the App Store.
-
-## Releases
-
-Every release is also available directly under this repo's
-[Releases](../../releases) page if you'd rather download the `.ipa` by hand
-instead of going through AltStore.
-
-## Updates
-
-Releases here are generated automatically by CI in the private development
-repository — nothing in this repo is edited by hand day-to-day. If something
-looks stale or broken, please open an issue.
+See [CHANGELOG.md](CHANGELOG.md) for release history.
