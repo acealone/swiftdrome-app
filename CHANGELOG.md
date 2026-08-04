@@ -6,7 +6,8 @@
 - Now Playing reports the codec you're actually hearing rather than the format of the file on the server, which differ whenever the server is transcoding. The bit rate is shown only where it describes the stream.
 - The buffering notice sits above the progress bar instead of below the times, where it pushed the controls down as it came and went.
 - A crossfade now shows in the metadata line as a moving indicator that tracks the blend, replacing the caption that named the incoming track and counted seconds.
-- The queue needs no Edit button. Tracks you queued yourself carry a grip on the right and can be dragged into order at any time, and every row swipes away to remove it. A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
+- The queue needs no Edit button. Tracks you queued yourself carry a grip on the right you can drag straight away to reorder them, and every row still swipes away to remove it. A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
+- The app is now translated throughout rather than only in the tab bar. Login, Home, Library, Search, Settings, Playback, Now Playing, the queue and every error message read in your language, as does the accent colour picker in the iOS Settings app. German is complete; counts like "3 songs" follow each language's own singular and plural rules.
 
 ## [0.4.0] - 2026-08-04
 
