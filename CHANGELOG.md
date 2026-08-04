@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-- The Gapless Playback toggle is gone: consecutive album tracks are always joined now. It was a switch whose only other position inserted a gap the record didn't have, and anyone who had turned it off will hear their albums run on from here.
+## [0.4.0] - 2026-08-04
 
 - Settings rows are now drawn on the same glass the mini player sits on, and pressing one is answered by the highlight moving under your finger rather than by nothing happening until the next screen appears. The Library list and the login form use the same cards, so they follow.
 - The paragraph under the storage meter is gone; the meter says what's used out of what.
@@ -12,8 +12,8 @@
 - Album tracks are now only joined gaplessly when the next one actually follows on. Track 1 into track 3 of the same album is crossfaded like any other transition, since the recording doesn't run on and joining them would close a gap the album intended. Tracks the server sends no number for are crossfaded too, rather than joined on a guess.
 
 - Fixed Quality on Wi-Fi going blank the moment that connection was switched from the original file to a transcode. It now falls back to the highest bitrate on offer.
-- The Keep Albums Intact toggle is gone. Gapless Playback decides it now: with gapless on, album tracks are joined rather than crossfaded, and with it off they crossfade like anything else — which is all the old toggle ever chose between.
-- The Playback screen says what it is actually doing in one line — "Detected environment: Wi-Fi / Lossless" — instead of a paragraph, and the explanation under Gapless Playback is gone.
+- The Keep Albums Intact toggle is gone. Consecutive album tracks are joined rather than crossfaded, which is all the old toggle ever chose between.
+- The Playback screen says what it is actually doing in one line — "Detected environment: Wi-Fi / Lossless" — instead of a paragraph.
 
 - The queue is now one list in the order you'll hear it, instead of three sections named after where the app happened to be holding each track. The track playing is marked with a level meter over its artwork and the screen opens scrolled to it, with the last five you played above.
 - Tapping anything in the queue plays it straight away. Tracks between it and what's playing are dropped rather than skipped through, and the queue tops itself back up afterwards.
@@ -25,8 +25,8 @@
 - Album tracks now also join gaplessly when streaming Opus, not only when streaming the original files.
 - The stream format picker offers Opus, AAC and MP3. Ogg Vorbis is gone because iOS can't play it, and FLAC because transcoding to it saves nothing; anyone who had either selected is moved to Opus.
 
-- Albums now play gaplessly: consecutive tracks run into each other with no silence between them, so records mastered as one continuous piece finally play as one. It sits alongside crossfading rather than replacing it — album tracks are joined, everything else still blends — and there's a Gapless setting to turn it off.
-- Gapless needs the original file: a server transcoding on the way out strips the information a seamless join depends on, and for some formats there's no way to carry it. It applies wherever transcoding is off, which by default is Wi-Fi, and the Gapless setting says which connections it currently covers rather than leaving you guessing.
+- Albums now play gaplessly: consecutive tracks run into each other with no silence between them, so records mastered as one continuous piece finally play as one. It sits alongside crossfading rather than replacing it: album tracks are joined, everything else still blends.
+- Gapless needs the original file: a server transcoding on the way out strips the information a seamless join depends on, and for some formats there's no way to carry it. It applies wherever transcoding is off, which by default is Wi-Fi.
 - Skipping forward onto a track that's already been lined up for a gapless join is now instant, since it's loaded and ready rather than being fetched from scratch.
 
 - Playback no longer runs out. The queue is kept stocked with ten tracks similar to what you're listening to, gathered from the server and topped up as they're played, so a single song can carry on indefinitely.
@@ -38,7 +38,7 @@
 - Settings has a Theme setting — Light, Dark or Auto — which applies across the whole app. Theme, Accent Color and Language are now grouped under Appearance.
 - Storage now has a maximum size — 512 MB up to 10 GB — with a meter showing how much of it is in use. The recently played tracks the app keeps for offline replay and instant seeking aren't governed by it and are always kept; Clear Cache still removes them along with everything else.
 - The app version and Subsonic API revision moved to a line at the bottom of Settings instead of taking up a row of their own.
-- Crossfading is now configurable in Settings: turn it off, set the overlap anywhere from 0 to 12 seconds, and choose whether tracks from the same album are left to follow each other untouched (on by default, so albums play in the order they were sequenced).
+- Crossfading is now configurable in Settings: turn it off, or set the overlap anywhere from 0 to 12 seconds. Consecutive album tracks are left out of it, so albums still play in the order they were sequenced.
 
 - The Now Playing screen has been rebuilt. Crossfades are now visible while they happen: the cover art of the track coming in dissolves across the one going out, the background colour turns over with it, and a line under the progress bar names the incoming track. The tail of the progress bar is marked so you can see where the next track will start blending in.
 - Now Playing shows what you're actually hearing: genre and year above the progress bar, and a line beneath it giving whether the track is streaming or playing from the device, its format, bitrate and ReplayGain.
