@@ -6,7 +6,7 @@
 - Now Playing reports the codec you're actually hearing rather than the format of the file on the server, which differ whenever the server is transcoding. The bit rate is shown only where it describes the stream.
 - The buffering notice sits above the progress bar instead of below the times, where it pushed the controls down as it came and went.
 - A crossfade now shows in the metadata line as a moving indicator that tracks the blend, replacing the caption that named the incoming track and counted seconds.
-- The queue is editable as soon as you open it. Tracks you queued yourself have a grip for dragging them into order, and the Edit button is gone.
+- The queue is editable as soon as you open it. Tracks you queued yourself have a grip for dragging them into order, and the Edit button is gone. A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
 
 ## [0.4.0] - 2026-08-04
 
