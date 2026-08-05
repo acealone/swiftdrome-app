@@ -2,20 +2,7 @@
 
 ## [Unreleased]
 
-- Fixed the Now Playing background dropping to black for a moment when a track changed. Cover art is now kept in memory, so it also appears instantly on screens you've already visited.
-- Now Playing reports the codec you're actually hearing rather than the format of the file on the server, which differ whenever the server is transcoding. The bit rate is shown only where it describes the stream.
-- The buffering notice sits above the progress bar instead of below the times, where it pushed the controls down as it came and went.
-- A crossfade now shows in the metadata line as a moving indicator that tracks the blend, replacing the caption that named the incoming track and counted seconds.
-- The queue needs no Edit button. Tracks you queued yourself carry a grip on the right you can drag straight away to reorder them, and every row still swipes away to remove it. A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
-- The app is now translated throughout rather than only in the tab bar. Login, Home, Library, Search, Settings, Playback, Now Playing, the queue and every error message read in your language, as does the accent colour picker in the iOS Settings app. German is complete; counts like "3 songs" follow each language's own singular and plural rules.
-- Your queue survives closing the app. Reopening restores what was playing along with everything queued behind it, what had already been played, and the tracks gathered to follow on.
-- Reordering a queued track is steadier. Press the grip on the right and the row lifts with a tap you can feel, follows your finger straight up and down without wandering sideways, and ticks as it passes each track it displaces. Pressing anywhere else on a row still opens its menu, and the list still scrolls normally.
-- Removing a track from the queue now takes the row away with it, and a track removed from the continuous queue is not offered again the next time the queue tops itself up.
-- Swipe to remove is offered only on tracks that are still to come, where it does something, rather than on tracks already played.
-- Fixed an empty row appearing between the track playing and the rest of the queue.
-- The Theme setting no longer squeezes its label off the row in languages whose word for it is long, German among them. The label sits above the choices when it needs the space.
-
-## [0.4.0] - 2026-08-04
+## [0.4.0] - 2026-08-05
 
 ### One track into the next
 
@@ -26,8 +13,10 @@
 
 ### Now Playing
 
-- The screen has been rebuilt around the crossfade, which you can now see happening: the cover art of the track coming in dissolves across the one going out, the background colour turns over with it, and a line under the progress bar names the incoming track. The tail of the bar is marked, so you can see where the next track will start blending in.
-- It says what you're actually hearing — genre and year above the progress bar, and beneath it whether the track is streaming or playing from the device, its format, bitrate and ReplayGain.
+- The screen has been rebuilt around the crossfade, which you can now see happening: the cover art of the track coming in dissolves across the one going out, the background colour turns over with it, and a moving indicator in the metadata line tracks the blend. The tail of the progress bar is marked, so you can see where the next track will start blending in.
+- It says what you're actually hearing — genre and year above the progress bar, and beneath it whether the track is streaming or playing from the device, its format, bitrate and ReplayGain. The codec named is the one reaching you rather than the format of the file on the server, which differ whenever the server is transcoding, and the bit rate is shown only where it describes the stream.
+- The background no longer drops to black for a moment when a track changes. Cover art is kept in memory, so it also appears instantly on screens you've already visited.
+- The buffering notice sits above the progress bar instead of below the times, where it pushed the controls down as it came and went.
 - Added a sleep timer: 15, 30, 45 or 60 minutes, after which playback pauses where it got to, so pressing play carries on.
 - The layout follows Apple Music more closely. The volume slider is gone, play/pause has lost its surrounding circle, and the row along the bottom is AirPlay, download state, lyrics, queue and the sleep timer, with favourite and a menu button above the progress bar.
 - Dragging the progress bar no longer fights you: the handle stays where you put it while you drag, and playback jumps once you let go. The lock screen and Control Center bar follows playback and can be dragged too, and the two stay in step after a stall or a buffer.
@@ -37,7 +26,10 @@
 
 - The queue is one list in the order you'll hear it, rather than three sections named after where the app happened to be holding each track. What's playing is marked with a level meter over its artwork and the screen opens scrolled to it, with the last five you played above.
 - Tapping anything in the queue plays it straight away. The tracks between it and what's playing are dropped rather than skipped through, and the queue tops itself back up afterwards.
-- Entries can be removed by swiping, and Edit gives the tracks you queued yourself a handle for dragging them into order. Holding any track opens a menu to play it now, move it up next, favourite it, or remove it. Anything you add with Play Next stays ahead of the automatically gathered tracks.
+- Reordering needs no Edit button. Tracks you queued yourself carry a grip on the right: press it and the row lifts with a tap you can feel, follows your finger straight up and down without wandering sideways, and ticks as it passes each track it displaces. Pressing anywhere else on a row opens a menu to play it now, move it up next, favourite it, or remove it, and the list still scrolls normally. Anything you add with Play Next stays ahead of the automatically gathered tracks.
+- A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
+- Swiping a track away removes it, on the tracks still to come rather than on ones already played, and the row goes with it. A track you remove from the continuous queue is not offered again the next time the queue tops itself up.
+- Your queue survives closing the app. Reopening restores what was playing along with everything queued behind it, what had already been played, and the tracks gathered to follow on.
 
 ### Streaming and storage
 
@@ -50,9 +42,13 @@
 
 - Everything about streaming and how one track gives way to the next now lives on its own Playback screen, instead of taking up three sections of the main list.
 - Settings opens with the server you're connected to: which one, the account it's using, whether it's answering, and how many custom headers are set.
-- Added a Theme setting — Light, Dark or Auto — which applies across the whole app. Theme, Accent Color and Language are grouped under Appearance.
+- Added a Theme setting — Light, Dark or Auto — which applies across the whole app. Theme, Accent Color and Language are grouped under Appearance. The Theme label takes its own line where a language's word for it is too long to sit beside the choices.
 - The cards are drawn on the same glass the mini player sits on, and pressing a row is answered by the system's highlight moving under your finger. The Library list and the login form use the same cards, so they follow.
 - The app version and Subsonic API revision moved to a line at the bottom instead of taking up a row of their own.
+
+### Language
+
+- The app is now translated throughout rather than only in the tab bar. Login, Home, Library, Search, Settings, Playback, Now Playing, the queue and every error message read in your language, as does the accent colour picker in the iOS Settings app. German is complete; counts like "3 songs" follow each language's own singular and plural rules.
 
 ## [0.3.0] - 2026-07-31
 
