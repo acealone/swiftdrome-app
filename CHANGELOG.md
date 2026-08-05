@@ -8,6 +8,12 @@
 - A crossfade now shows in the metadata line as a moving indicator that tracks the blend, replacing the caption that named the incoming track and counted seconds.
 - The queue needs no Edit button. Tracks you queued yourself carry a grip on the right you can drag straight away to reorder them, and every row still swipes away to remove it. A labelled rule marks where your queue ends and the tracks that follow on their own begin — those can be removed but not reordered.
 - The app is now translated throughout rather than only in the tab bar. Login, Home, Library, Search, Settings, Playback, Now Playing, the queue and every error message read in your language, as does the accent colour picker in the iOS Settings app. German is complete; counts like "3 songs" follow each language's own singular and plural rules.
+- Your queue survives closing the app. Reopening restores what was playing along with everything queued behind it, what had already been played, and the tracks gathered to follow on.
+- Reordering a queued track is steadier. Press the grip on the right and the row lifts with a tap you can feel, follows your finger straight up and down without wandering sideways, and ticks as it passes each track it displaces. Pressing anywhere else on a row still opens its menu, and the list still scrolls normally.
+- Removing a track from the queue now takes the row away with it, and a track removed from the continuous queue is not offered again the next time the queue tops itself up.
+- Swipe to remove is offered only on tracks that are still to come, where it does something, rather than on tracks already played.
+- Fixed an empty row appearing between the track playing and the rest of the queue.
+- The Theme setting no longer squeezes its label off the row in languages whose word for it is long, German among them. The label sits above the choices when it needs the space.
 
 ## [0.4.0] - 2026-08-04
 
