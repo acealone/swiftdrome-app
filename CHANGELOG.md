@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-08-06
+
+- The Library now lists what you've starred, in three entries of its own: Favorite Artists, Favorite Albums and Favorite Songs. Tapping a favourite song starts playing from there through the rest of them, and the heart beside it is filled, so a song can be unstarred from the list; artists and albums open as they do anywhere else.
+- Now Playing reports the streaming quality when an encoding is selected: the file's own rate when the original is being sent, and the rate the stream was requested at when it's being transcoded.
+- The buffering notice now shares the genre/year line above the progress bar instead of adding a row of its own, so nothing shifts up or down as it comes and goes.
+- That same line on Now Playing reads year first and genre second, rather than the other way round.
+- Home's carousels have bigger covers, and the album, artist and top-artist labels under them are no longer tinted with the accent colour — they read as ordinary text again.
+- Switching between Light and Dark in Settings now recolours the Settings screen straight away, instead of leaving it on the old appearance until it is closed and reopened. The mini player above the tab bar follows the change too, rather than waiting for the next launch.
+- ReplayGain is now applied during playback, so a loud remaster no longer arrives at twice the volume of the album track before it. A new section on the Playback screen in Settings turns it on or off and, when it's on, offers: the mode (Auto — album levels while a record plays through, track levels elsewhere — or Album or Track), a pre-amp, a default gain for tracks the server sends no ReplayGain information for, and clipping protection for lossy files whose peaks overshoot. Only tracks louder than the reference are turned down — nothing is boosted, though a negative pre-amp buys the headroom to make quieter tracks come up too. Any of these is heard on the track already playing rather than at the next one.
+- Emptying the downloaded tracks while something is playing no longer makes the Now Playing line flicker between the crossfade indicator and the track's details, showing both at once. Files the app had noted as downloaded are now checked to still be there before it plays or joins one, and a blend that fails is not retried for the rest of the track.
+
 ## [0.4.0] - 2026-08-05
 
 ### One track into the next
