@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-08-07
+
+- Home can now be pulled down to refresh, which reloads the carousels without leaving the screen. Random Albums is deliberately left out of that refresh — it is picked once when the app starts and otherwise stays put, so the covers you were about to tap don't move under you. A refresh button at the right-hand end of its headline picks a new set whenever you want one: it taps back under your finger as you press it, turns while the new covers are on their way, and comes out of the turn as a checkmark — so you can tell a shuffle that landed on similar-looking covers from a button that didn't do anything.
+- A track ending normally now moves straight on to the next one. The scrobble for the finished track is still sent, but the app no longer waits for the server to acknowledge it first, so a slow or unreachable server can't leave a gap of silence at the boundary.
+- The album, artist, playlist and search labels outside Home read as ordinary text again instead of picking up the accent colour: Albums, Playlists, an artist's albums, Library's Recently Added, Favorites and the search results all follow the same treatment Home already got.
+- Pressing play on the track the app brought back from your last session now keeps playing when you put the phone away. It used to stop the moment the app left the screen, leaving the lock screen showing something that wasn't playing and a play button that started the wrong song — the app claims the audio the system reserves for playing in the background at the moment you press play, rather than only when you choose a new track.
+- That resumed track also starts where you left it rather than at the beginning. The position was only restored for tracks already downloaded to the device; a track being streamed silently began again from 0:00 while the progress bar claimed otherwise, which on cellular was every time. Where the stream can't be moved to the saved position, the app now fetches the track and picks up from there, the same way dragging the progress bar already does.
+- Search now waits for a short pause in typing before asking the server, rather than sending a request for every letter. A ten-letter query costs one search instead of ten, which on a server that is also streaming to you is work it no longer has to do. Clearing the field still empties the results at once.
+
 ## [0.5.0] - 2026-08-06
 
 - The Library now lists what you've starred, in three entries of its own: Favorite Artists, Favorite Albums and Favorite Songs. Tapping a favourite song starts playing from there through the rest of them, and the heart beside it is filled, so a song can be unstarred from the list; artists and albums open as they do anywhere else.
@@ -11,6 +20,7 @@
 - Home's carousels have bigger covers, and the album, artist and top-artist labels under them are no longer tinted with the accent colour — they read as ordinary text again.
 - Switching between Light and Dark in Settings now recolours the Settings screen straight away, instead of leaving it on the old appearance until it is closed and reopened. The mini player above the tab bar follows the change too, rather than waiting for the next launch.
 - ReplayGain is now applied during playback, so a loud remaster no longer arrives at twice the volume of the album track before it. A new section on the Playback screen in Settings turns it on or off and, when it's on, offers: the mode (Auto — album levels while a record plays through, track levels elsewhere — or Album or Track), a pre-amp, a default gain for tracks the server sends no ReplayGain information for, and clipping protection for lossy files whose peaks overshoot. Only tracks louder than the reference are turned down — nothing is boosted, though a negative pre-amp buys the headroom to make quieter tracks come up too. Any of these is heard on the track already playing rather than at the next one.
+- Downloading a track to the device no longer holds the whole file in memory while it arrives — it is written straight to disk instead. A lossless track used to cost tens of megabytes of memory for the length of the download, twice over at the peak, which on a busy phone is the kind of thing that gets an app in the background closed.
 - Emptying the downloaded tracks while something is playing no longer makes the Now Playing line flicker between the crossfade indicator and the track's details, showing both at once. Files the app had noted as downloaded are now checked to still be there before it plays or joins one, and a blend that fails is not retried for the rest of the track.
 
 ## [0.4.0] - 2026-08-05
