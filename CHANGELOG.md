@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [0.7.3] - 2026-08-10
+## [0.7.4] - 2026-08-10
 
 - The app can be installed and updated from the AltStore source again. Every build so far reported itself as version 1.0.0 no matter which release it was — the version was never written into the app, so the build tool filled in its own placeholder — and AltStore refuses to install an app whose version disagrees with the one the source advertises. Builds now carry their real version number, and the source lists the iOS version the app actually needs (26) rather than the 17 it was seeded with.
 
