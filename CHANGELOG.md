@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.7.3] - 2026-08-10
+
+- The app can be installed and updated from the AltStore source again. Every build so far reported itself as version 1.0.0 no matter which release it was — the version was never written into the app, so the build tool filled in its own placeholder — and AltStore refuses to install an app whose version disagrees with the one the source advertises. Builds now carry their real version number, and the source lists the iOS version the app actually needs (26) rather than the 17 it was seeded with.
+
 ## [0.7.2] - 2026-08-10
 
 - Closing Now Playing lands the pill exactly where the mini player sits. On a full screen the shrink used to stop a notch-height short and the pill snapped down the last stretch — the landing spot was measured against the wrong edge of the screen, in a way that happened to cancel out in windowed setups like LiveContainer's multitasking mode.
