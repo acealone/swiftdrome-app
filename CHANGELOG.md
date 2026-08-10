@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-08-10
+
+- Switching tabs no longer freezes the app while something is playing. The mini player's new home in the tab bar could send the bar's layout in circles — the player's height depended on what the bar offered, and the bar's size depended on the player's height — and on any tab you entered after launch the app locked up solid. The player now states its own height, and the layout settles.
+- Pulling the queue down follows your finger again. Since the player became one surface with the mini player, the queue's pull-to-close still worked — but the screen no longer moved with the drag, so the player just vanished on release with nothing warning it was about to. The pull now carries the whole surface down as it always did in the player layout.
+- If the app ever hangs again, it writes that down: a new hang.log records when the interface stopped responding and for how long, and comes along when exporting logs from Settings — so a freeze can be reported with evidence, the way a crash always left a crash.log.
+
 ## [0.7.0] - 2026-08-10
 
 - Settings now opens from a gear in the top-right corner of nearly every screen — Home, Library, Playlists, Search, and the album, playlist and artist pages — and the screen grows out of the gear you tapped rather than sliding up as a detached sheet, closing back into it the same way. The person icon that used to sit on three of the tabs is gone.
