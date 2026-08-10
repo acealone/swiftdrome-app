@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.7.2] - 2026-08-10
+
+- Closing Now Playing lands the pill exactly where the mini player sits. On a full screen the shrink used to stop a notch-height short and the pill snapped down the last stretch — the landing spot was measured against the wrong edge of the screen, in a way that happened to cancel out in windowed setups like LiveContainer's multitasking mode.
+
 ## [0.7.1] - 2026-08-10
 
 - Switching tabs no longer freezes the app while something is playing. The mini player's new home in the tab bar could send the bar's layout in circles — the player's height depended on what the bar offered, and the bar's size depended on the player's height — and on any tab you entered after launch the app locked up solid. The player now states its own height, and the layout settles.
