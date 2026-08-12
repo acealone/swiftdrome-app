@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-08-12
+
+- The logs can be read in the app. Settings → Diagnostics used to offer one thing, an export, which meant diagnosing anything on the device started by sending files to another app. That row now leads to the log itself: newest entries first, filterable by category and down to errors only, and searchable by text. A crash or a hang report sits at the top of the screen when there is one, and opens as the text it is. The export is still there, on the same screen, and still hands over everything — what you filtered the view down to never changes what gets sent.
+- Rows that lead somewhere answer anywhere along them. Logs in Settings, and Playlists, Artists, Albums and the rest of the Library list, only reacted where something was drawn — the words and the chevron — so a tap in the space between them, or just above or below the text, did nothing at all. The whole row is the target now.
+- Settings says which build is installed. Every preview build of a pull request carries the last release's version number, so two of them were indistinguishable once installed; the footer now shows the commit each build came from underneath the version, and reads "local" for a build made on your own machine. The line can be selected and copied straight into a bug report.
+
 ## [0.8.0] - 2026-08-12
 
 - Songs streamed as Opus can be downloaded again. Every Opus download was being thrown away the moment it finished, on the grounds that it had arrived incomplete — and it hadn't: iOS works an Opus file's length out from an assumed bitrate rather than reading the length the file states, and it was wrong by up to half a minute on a three-and-a-half-minute song. Nothing reached the device, so nothing could be played offline, and the app kept trying: the same song was fetched again a second later, and again, for as long as it was in the queue. An Opus file is now measured by what it says about itself, exact to the sample, and the check that rejects a genuinely truncated download is the file's own account of whether it ended.
