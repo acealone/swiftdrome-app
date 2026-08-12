@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-08-12
+
+- Settings no longer says the version twice. The footer read "SwiftDrome 0.8.1 (0.8.1)" — the brackets are where iOS puts the build number, and there was nothing to put in them, so they only repeated what stood in front of them. The commit the build came from now sits there instead, on the same line rather than a line of its own: "SwiftDrome 0.8.2 (a1b2c3d)", or "(local)" for a build made on your own machine. The line is still selectable, to be pasted into a bug report.
+
 ## [0.8.1] - 2026-08-12
 
 - The logs can be read in the app. Settings → Diagnostics used to offer one thing, an export, which meant diagnosing anything on the device started by sending files to another app. That row now leads to the log itself: newest entries first, filterable by category and down to errors only, and searchable by text. A crash or a hang report sits at the top of the screen when there is one, and opens as the text it is. The export is still there, on the same screen, and still hands over everything — what you filtered the view down to never changes what gets sent.
