@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.8.1",
-      "versionDate": "2026-08-12T08:36:43Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.8.1/SwiftDrome.ipa",
-      "versionDescription": "- The logs can be read in the app. Settings → Diagnostics used to offer one thing, an export, which meant diagnosing anything on the device started by sending files to another app. That row now leads to the log itself: newest entries first, filterable by category and down to errors only, and searchable by text. A crash or a hang report sits at the top of the screen when there is one, and opens as the text it is. The export is still there, on the same screen, and still hands over everything — what you filtered the view down to never changes what gets sent.\n- Rows that lead somewhere answer anywhere along them. Logs in Settings, and Playlists, Artists, Albums and the rest of the Library list, only reacted where something was drawn — the words and the chevron — so a tap in the space between them, or just above or below the text, did nothing at all. The whole row is the target now.\n- Settings says which build is installed. Every preview build of a pull request carries the last release's version number, so two of them were indistinguishable once installed; the footer now shows the commit each build came from underneath the version, and reads \"local\" for a build made on your own machine. The line can be selected and copied straight into a bug report.",
-      "size": 8167677,
+      "version": "0.8.2",
+      "versionDate": "2026-08-12T08:52:38Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.8.2/SwiftDrome.ipa",
+      "versionDescription": "- Settings no longer says the version twice. The footer read \"SwiftDrome 0.8.1 (0.8.1)\" — the brackets are where iOS puts the build number, and there was nothing to put in them, so they only repeated what stood in front of them. The commit the build came from now sits there instead, on the same line rather than a line of its own: \"SwiftDrome 0.8.2 (a1b2c3d)\", or \"(local)\" for a build made on your own machine. The line is still selectable, to be pasted into a bug report.",
+      "size": 8150689,
       "versions": [
+        {
+          "version": "0.8.2",
+          "date": "2026-08-12T08:52:38Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.8.2/SwiftDrome.ipa",
+          "size": 8150689,
+          "localizedDescription": "- Settings no longer says the version twice. The footer read \"SwiftDrome 0.8.1 (0.8.1)\" — the brackets are where iOS puts the build number, and there was nothing to put in them, so they only repeated what stood in front of them. The commit the build came from now sits there instead, on the same line rather than a line of its own: \"SwiftDrome 0.8.2 (a1b2c3d)\", or \"(local)\" for a build made on your own machine. The line is still selectable, to be pasted into a bug report.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.8.1",
           "date": "2026-08-12T08:36:43Z",
