@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [0.9.0] - 2026-08-12
+## [0.8.1] - 2026-08-12
 
 - The logs can be read in the app. Settings → Diagnostics used to offer one thing, an export, which meant diagnosing anything on the device started by sending files to another app. That row now leads to the log itself: newest entries first, filterable by category and down to errors only, and searchable by text. A crash or a hang report sits at the top of the screen when there is one, and opens as the text it is. The export is still there, on the same screen, and still hands over everything — what you filtered the view down to never changes what gets sent.
 - Rows that lead somewhere answer anywhere along them. Logs in Settings, and Playlists, Artists, Albums and the rest of the Library list, only reacted where something was drawn — the words and the chevron — so a tap in the space between them, or just above or below the text, did nothing at all. The whole row is the target now.
