@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-08-13
+
+- Songs you listen to are kept, without being downloaded a second time. A song that wasn't already on the device used to be fetched twice over: once to play it, and once again, from the same server, to keep it — two transcodes of one song, racing each other. It cost enough that it was only ever done on Wi-Fi, so nothing you played on cellular was kept at all. The bytes that play the song are now written down as they arrive, so keeping it costs nothing beyond hearing it, and it happens on every connection.
+- Songs stop breaking up mid-play and restarting from the beginning. When a stream stalled, iOS asked the server for it again — and a server transcoding as it sends can only answer by starting the song over, which was heard as the track jumping back to its beginning while the progress bar carried on regardless, every position wrong from then on. What has already arrived is now held on the device, so that second ask is answered from there instead of from the server.
+- A song is only kept when the whole of it arrived. Skipping part way through, or scrubbing, leaves nothing behind rather than a partial file — a half-finished song still claims its full length, and once kept it would play out early or scrub to the wrong place every time. Nothing kept this way skips the checks a download goes through: it is verified against the length the server reports, and repacked so scrubbing lands exactly.
+
 ## [0.8.2] - 2026-08-12
 
 - Settings no longer says the version twice. The footer read "SwiftDrome 0.8.1 (0.8.1)" — the brackets are where iOS puts the build number, and there was nothing to put in them, so they only repeated what stood in front of them. The commit the build came from now sits there instead, on the same line rather than a line of its own: "SwiftDrome 0.8.2 (a1b2c3d)", or "(local)" for a build made on your own machine. The line is still selectable, to be pasted into a bug report.
