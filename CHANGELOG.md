@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.13.1] - 2026-08-15
+
+- Dragging the progress bar in a song stored on the device as Opus now lands where you drop it. iOS cannot seek an Opus file: it has no way to find a moment in one, so it divides the file up by an assumed bitrate and picks a spot from that -- which on these files was out by several percent, enough that dragging near the end of a song landed past the end of the audio and skipped straight to the next one. The app now finds the moment itself, by reading the timing the file records for each of its pages, and hands iOS a stream that begins exactly there. Nothing is re-downloaded and nothing on the server is touched; the whole thing happens on the device against the copy already there. Songs still arriving over the network were never affected -- those are seeked by asking the server to start the song where you dropped the scrubber.
+- Songs stored as Opus no longer report the length of the song before them. Where one song ran into the next without a gap, the app measured the wrong file and gave the new song its predecessor's length. Two ways that was heard: a song shown shorter than it is ran its clock past a total sitting at 0:00, and a song shown longer put the end of the progress bar past the end of the audio -- so dragging near it skipped the song instantly, and the crossfade, which is timed against that same length, never got the chance to start.
+- The Now Playing line no longer claims a song is streaming after you drag the progress bar. Seeking a song stored on the device left it reading "Stream", and the codec and bitrate beside it described what the connection would have asked for rather than the copy actually playing.
+
 ## [0.13.0] - 2026-08-15
 
 - A song whose stream quietly stops arriving no longer plays into silence. A connection that drops mid-song doesn't fail in any way the app could see -- the player holds a perfectly good song and is simply never fed again -- so the music stopped, the pause button went on claiming to play, and nothing happened until you pressed something. The app now watches for exactly that (no sound while bytes have stopped landing) and picks the song back up from the second it stopped: it fetches the rest of it from there, plays that from the device, and only falls back to fetching the whole song again where the server can't start part way through. Where the song was already fully downloaded, it just carries on from the file.
