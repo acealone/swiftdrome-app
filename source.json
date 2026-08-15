@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.10.1",
-      "versionDate": "2026-08-15T13:41:01Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.10.1/SwiftDrome.ipa",
-      "versionDescription": "- The Now Playing song info line says where the music is coming from in a single word: \"Cache\" for a copy on the device, \"Stream\" for one arriving live, in place of the longer \"Cached\" and \"Streaming\". Same meaning, less of the line spent on it, so the codec and bitrate beside it stay readable.",
-      "size": 8611089,
+      "version": "0.11.0",
+      "versionDate": "2026-08-15T14:19:27Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.11.0/SwiftDrome.ipa",
+      "versionDescription": "- Long song titles scroll instead of being cut off. A title, album or artist wider than the space it has now holds at its start, travels to its end, waits there, and comes back -- in the mini player, in the pill the player shrinks to, and on the Now Playing screen, where all three lines move as one block rather than each drifting at its own pace. Lines that fit still sit still, and with Reduce Motion on nothing moves at all. Long titles are the norm on this screen -- classical movements, remix credits, multi-artist billings -- and it is the screen you opened to read what is playing, so an ellipsis was the wrong answer on any of them.\n- The mini player gives the song's name the whole row it was already occupying. The title used to stop a quarter of the way short of the play button with nothing but empty space between, however long it was: the row split its free width evenly between the title and the gap in front of the controls. The title now claims that width itself, and the play and skip buttons sit as one pair against the pill's edge instead of drifting apart with the row's spacing between them.\n- The Settings server row no longer carries a blue circle with a music note in it. The row says which server you are on; the badge said nothing the row didn't.",
+      "size": 8850151,
       "versions": [
+        {
+          "version": "0.11.0",
+          "date": "2026-08-15T14:19:27Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.11.0/SwiftDrome.ipa",
+          "size": 8850151,
+          "localizedDescription": "- Long song titles scroll instead of being cut off. A title, album or artist wider than the space it has now holds at its start, travels to its end, waits there, and comes back -- in the mini player, in the pill the player shrinks to, and on the Now Playing screen, where all three lines move as one block rather than each drifting at its own pace. Lines that fit still sit still, and with Reduce Motion on nothing moves at all. Long titles are the norm on this screen -- classical movements, remix credits, multi-artist billings -- and it is the screen you opened to read what is playing, so an ellipsis was the wrong answer on any of them.\n- The mini player gives the song's name the whole row it was already occupying. The title used to stop a quarter of the way short of the play button with nothing but empty space between, however long it was: the row split its free width evenly between the title and the gap in front of the controls. The title now claims that width itself, and the play and skip buttons sit as one pair against the pill's edge instead of drifting apart with the row's spacing between them.\n- The Settings server row no longer carries a blue circle with a music note in it. The row says which server you are on; the badge said nothing the row didn't.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.10.1",
           "date": "2026-08-15T13:41:01Z",
