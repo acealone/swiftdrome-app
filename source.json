@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.19.0",
-      "versionDate": "2026-08-16T15:45:35Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.0/SwiftDrome.ipa",
-      "versionDescription": "- Shuffle and repeat work. Both buttons were drawn on the player and both were dead -- the queue had no notion of either, so enabling them would have been a control that lied about what it did. Shuffle now rearranges everything still to come and leaves the song playing alone, because pressing it was never a request to restart what you are listening to; pressing it again puts the original order back, carrying on from wherever you have got to rather than handing back songs you just heard. Repeat is one button with three positions -- off, the queue round again, this song round again -- and the glyph changes for the third, since a tinted \"repeat\" and a tinted \"repeat.1\" would otherwise be the same control describing two different behaviours. Both switches survive closing the app, and both are now on the lock screen and in CarPlay, showing the position the player is actually in.\n- The Shuffle button on an album, a playlist or an artist turns the player's shuffle switch on instead of quietly handing over a pre-shuffled list. The old way left the switch reading off over a queue that was plainly shuffled, and no way back to the record's running order; now it lights up, and pressing it puts the album back into sequence from wherever you are in it. Which song opens is still drawn at random -- a shuffle that always starts on track one isn't one.\n- Repeat All stops the queue gathering more music onto the end. The suggestions that keep an album playing past its last song are what a queue asked to come round again never gets to reach; the top-up is suspended while the button is on, and turning it off fills the queue straight back up.\n- A playlist looks like a record rather than a list with a picture on top. The artwork is the size an album's cover is and blurs and dims out of the way at the same rate as you scroll, the playlist's name hands over to the top bar once the header's own has gone under it, and the songs are the artwork rows the rest of the app draws -- cover, title over artist, keep badge, duration -- rather than a row with a heart column stealing the width. Starring moved into the long press, where the album screen already keeps it.\n- A playlist's songs answer to the same gestures an album's do: swipe right for Play Next, swipe left for Play Last, long press for the queue actions, starring and keep. The two screens shared none of that before, so which gesture did what depended on which screen you were standing on.",
-      "size": 11319028,
+      "version": "0.19.1",
+      "versionDate": "2026-08-16T18:56:16Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.1/SwiftDrome.ipa",
+      "versionDescription": "- Closing the player lands on the mini player cleanly. The pill came home looking milky, because the shrinking player carried its own sheet of glass down onto the glass the tab bar was already drawing there -- two of them stacked for the whole way down. The player now drops its glass the moment it starts shrinking and lets the bar's own show through.\n- The mini player no longer settles a couple of points off where it sits at rest when the tab bar is collapsed. The two positions the pill can occupy -- above the tab bar, or merged into it after scrolling -- don't sit the same way, and the landing now accounts for whichever one it is coming home to, worked out at the moment it closes rather than at the moment it opened.",
+      "size": 11322124,
       "versions": [
+        {
+          "version": "0.19.1",
+          "date": "2026-08-16T18:56:16Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.1/SwiftDrome.ipa",
+          "size": 11322124,
+          "localizedDescription": "- Closing the player lands on the mini player cleanly. The pill came home looking milky, because the shrinking player carried its own sheet of glass down onto the glass the tab bar was already drawing there -- two of them stacked for the whole way down. The player now drops its glass the moment it starts shrinking and lets the bar's own show through.\n- The mini player no longer settles a couple of points off where it sits at rest when the tab bar is collapsed. The two positions the pill can occupy -- above the tab bar, or merged into it after scrolling -- don't sit the same way, and the landing now accounts for whichever one it is coming home to, worked out at the moment it closes rather than at the moment it opened.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.19.0",
           "date": "2026-08-16T15:45:35Z",
