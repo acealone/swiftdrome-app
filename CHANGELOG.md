@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.19.1] - 2026-08-16
+
+- Closing the player lands on the mini player cleanly. The pill came home looking milky, because the shrinking player carried its own sheet of glass down onto the glass the tab bar was already drawing there -- two of them stacked for the whole way down. The player now drops its glass the moment it starts shrinking and lets the bar's own show through.
+- The mini player no longer settles a couple of points off where it sits at rest when the tab bar is collapsed. The two positions the pill can occupy -- above the tab bar, or merged into it after scrolling -- don't sit the same way, and the landing now accounts for whichever one it is coming home to, worked out at the moment it closes rather than at the moment it opened.
+
 ## [0.19.0] - 2026-08-16
 
 - Shuffle and repeat work. Both buttons were drawn on the player and both were dead -- the queue had no notion of either, so enabling them would have been a control that lied about what it did. Shuffle now rearranges everything still to come and leaves the song playing alone, because pressing it was never a request to restart what you are listening to; pressing it again puts the original order back, carrying on from wherever you have got to rather than handing back songs you just heard. Repeat is one button with three positions -- off, the queue round again, this song round again -- and the glyph changes for the third, since a tinted "repeat" and a tinted "repeat.1" would otherwise be the same control describing two different behaviours. Both switches survive closing the app, and both are now on the lock screen and in CarPlay, showing the position the player is actually in.
