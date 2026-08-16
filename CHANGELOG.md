@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-08-16
+
+- Keeping a whole album is a button on the album screen rather than an entry inside its ellipsis menu, sitting beside the heart where starring already is. A menu hid both the action and its answer: whether the record was already kept took two taps to find out. The button says it in its own shape -- outline for a record that isn't kept, filled and green for one that is -- and while a keep is running it becomes the progress ring for it, so the "3 of 12" that used to appear as a line under the album title no longer pushes the whole track list down and back up again as it comes and goes.
+- The ellipsis menu on the Now Playing screen does what its items say again. The menu opened, but pressing anything in it did nothing at all. The screen redraws ten times a second to move the playhead, and that redraw was reaching the open menu and rebuilding it under the finger, which loses the press. The parts of the screen that move with the clock and the parts that don't are now separated, so the menu stands still while it is open -- and the rest of the screen does less work per tick besides.
+- The album cover softens as the track list rises over it instead of shrinking. The old shrink moved everything underneath it -- title, artist, buttons, the whole list slid up as the artwork got smaller, while you were reading it. The cover now keeps its size and blurs and dims out of the way, so nothing on the screen changes position but the scroll itself.
+- The artist screen's banner is a proper header: taller, with the picture drifting slower than the list travelling over it, blurring and fading as the name written across it goes, and the artist's name arriving in the top bar as it does. Pulling down past the top stretches the picture rather than exposing the background behind it.
+
 ## [0.15.0] - 2026-08-16
 
 - A song waiting to be downloaded on a slow connection starts playing a third of the way in again, instead of after all of it. The app feeds the player out of the file as it fills, and on a slow link every read was being answered with only the bytes that had arrived so far -- which says "the song ends here" to the player, so it gave up on a song that was still coming. The app read that as a song the phone couldn't decode, dropped the download and went back to streaming over the same bad connection, which is exactly what the download was avoiding. Reads now wait for the bytes they asked for.
