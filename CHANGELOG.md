@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-08-16
+
+- The accent colour and the language can be set inside the app when it is running in a container like LiveContainer. Those two preferences live in Settings.app on a build iOS installed -- the accent in the app's own settings page, the language in the per-app picker iOS offers -- and an app running as a guest has no page there at all, so both rows led nowhere. A guest now gets the pickers in Settings itself, and a build installed on the device keeps the rows it always had. The app's own text changes language immediately; anything iOS draws for us, like the share sheet, follows the next time the app is opened.
+- Artists browse as a grid of round covers in lettered sections, with the index strip down the side to jump between them and the current letter in the top bar -- the same screen albums already had, so the library reads the same way whichever half of it you are in. Artist names no longer come out tinted in the accent colour.
+- The download and settings buttons in the top bar sit in one glass capsule instead of two. Two capsules meant the gap between them was the bar's to decide, which is what left the arrow floating well off the gear, and the sync spinner never quite landed between its neighbours.
+- The top bar's download button says when something is actually being transferred: the arrow fills with the accent colour from tail to head, pauses, and does it again. It reports that a file is moving right now, which the screen behind the button says nothing about until it is opened.
+- A long press on the gear while the library is syncing offers to stop the sync, rather than the only way to it being a trip into Settings.
+- Pulling down on an artist's banner stretches it from the top of the screen rather than opening a gap above it, the seam that could appear along the bottom edge mid-flick is gone, and the refresh spinner sits under the navigation bar where it belongs instead of behind the status bar.
+
 ## [0.17.0] - 2026-08-16
 
 - Settings is a short screen of destinations rather than one long list. The server card is now the way into everything about the server -- what was connected, the custom headers, the Library and its syncs, and scrobbling -- and Playback, Accessibility and Storage each get a screen of their own. Nothing was removed; what changed is that the top of Settings can be taken in at a glance instead of scrolled through to find the one row you came for.
