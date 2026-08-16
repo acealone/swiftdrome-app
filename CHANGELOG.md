@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-08-16
+
+- Settings is a short screen of destinations rather than one long list. The server card is now the way into everything about the server -- what was connected, the custom headers, the Library and its syncs, and scrobbling -- and Playback, Accessibility and Storage each get a screen of their own. Nothing was removed; what changed is that the top of Settings can be taken in at a glance instead of scrolled through to find the one row you came for.
+- Downloads have no size limit any more. The old cap was a number picked in Settings that silently stopped a keep part way through an album, and the only sign of it was music that never arrived. What someone deliberately asked to carry is now bounded by the device, the same as any other file on it -- and the size limit that remains governs only the cache the app fills by itself.
+- Downloads live in Storage, next to the space they take, rather than at the bottom of Playback. The section says how many songs are on the device and how much room they use, keeps the format, quality and "over Cellular" controls, and adds a Delete All Downloads that asks first: it empties the downloads, cancels anything still on its way, and says as much before it does it.
+- The Storage meter counts the cache alone. It used to add the downloads into the same figure, so the bar showed space that clearing the cache could not recover -- and went on showing it afterwards, since clearing never touched the downloads. The two are now separate numbers, and clearing the cache leaves the first one reading zero.
+- What is waiting to download is part of the Downloaded screen instead of a screen of its own, listed under what is already here -- the two answer the same question a beat apart. The way there now sits in the top bar at all times rather than appearing only while a transfer is running, so it can be found before starting one and doesn't vanish under the last song to land.
+- An album's name hands over to the top bar as its cover scrolls away, instead of standing in the bar and in the header at the same time -- the same handoff the artist screen already made.
+
 ## [0.16.0] - 2026-08-16
 
 - Keeping a whole album is a button on the album screen rather than an entry inside its ellipsis menu, sitting beside the heart where starring already is. A menu hid both the action and its answer: whether the record was already kept took two taps to find out. The button says it in its own shape -- outline for a record that isn't kept, filled and green for one that is -- and while a keep is running it becomes the progress ring for it, so the "3 of 12" that used to appear as a line under the album title no longer pushes the whole track list down and back up again as it comes and goes.
