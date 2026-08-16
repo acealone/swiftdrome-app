@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.19.3] - 2026-08-16
+
+- The re-roll button on the home screen's random shelf answers the press properly. It turns once anticlockwise and coasts to a stop, then the arrow hands itself over to a checkmark -- the head fades off, the ring erases from its start until only the tail is left, and the check draws out of that tail -- before the whole thing runs backwards to the arrow again. A fresh shuffle can come back looking a lot like the one it replaced, so without that confirmation there is no telling a re-roll that worked from a button that did nothing; a re-roll that fails now ends on the plain arrow rather than claiming otherwise, and the button presses in under the finger straight away instead of waiting for the covers to arrive.
+- Settings rows whose content is taller than an ordinary row -- a wrapped summary, a slider, a progress bar -- have room above and below again instead of sitting flush against the edge of the card, which read as the text hugging the bottom of the section. Rows of ordinary height are unchanged.
+
 ## [0.19.2] - 2026-08-16
 
 - The songs on the Downloaded screen answer to swipes like the songs on every other screen: right for Play Next, left for Play Last, and a long press for those plus starring and keeping. They had a long-press menu only, so a swipe that worked on an album or a playlist did nothing here.
