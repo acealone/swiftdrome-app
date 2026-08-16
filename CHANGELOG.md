@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-08-16
+
+- Songs, albums and playlists can be kept on the device, so they stay playable with no server and no connection. "Keep" sits on every track row, in the Now Playing menu and on an album's or playlist's ellipsis menu; "Stop Keeping" hands the copy back to the ordinary cache, which is free to evict it again. Kept copies are fetched in their own format and quality -- a new Downloads section in Playback Settings, with a size limit of its own -- on Wi-Fi only unless told otherwise, and always behind whatever playback is fetching, so keeping an album never slows down the song being listened to.
+- The badge on a track row now says which of four things is true rather than just "on the device or not": queued, arriving (with its progress), kept, or cached from having been played. The Downloaded screen separates what was deliberately kept from what happens to be cached, and each half plays as its own queue.
+- What is waiting to be downloaded has a screen of its own, listing the queue in the order it will arrive, with the transfer in flight showing its progress, "Waiting for Wi-Fi" where that is what's holding it up, and cancelling per song or all at once. It is reachable from the top bar of every browse screen for as long as anything is queued -- keep an album, carry on browsing, and the way back to the queue follows you -- and disappears once everything has landed.
+
 ## [0.13.1] - 2026-08-15
 
 - Dragging the progress bar in a song stored on the device as Opus now lands where you drop it. iOS cannot seek an Opus file: it has no way to find a moment in one, so it divides the file up by an assumed bitrate and picks a spot from that -- which on these files was out by several percent, enough that dragging near the end of a song landed past the end of the audio and skipped straight to the next one. The app now finds the moment itself, by reading the timing the file records for each of its pages, and hands iOS a stream that begins exactly there. Nothing is re-downloaded and nothing on the server is touched; the whole thing happens on the device against the copy already there. Songs still arriving over the network were never affected -- those are seeked by asking the server to start the song where you dropped the scrubber.
