@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.19.2] - 2026-08-16
+
+- The songs on the Downloaded screen answer to swipes like the songs on every other screen: right for Play Next, left for Play Last, and a long press for those plus starring and keeping. They had a long-press menu only, so a swipe that worked on an album or a playlist did nothing here.
+
 ## [0.19.1] - 2026-08-16
 
 - Closing the player lands on the mini player cleanly. The pill came home looking milky, because the shrinking player carried its own sheet of glass down onto the glass the tab bar was already drawing there -- two of them stacked for the whole way down. The player now drops its glass the moment it starts shrinking and lets the bar's own show through.
