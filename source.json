@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.19.1",
-      "versionDate": "2026-08-16T18:56:16Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.1/SwiftDrome.ipa",
-      "versionDescription": "- Closing the player lands on the mini player cleanly. The pill came home looking milky, because the shrinking player carried its own sheet of glass down onto the glass the tab bar was already drawing there -- two of them stacked for the whole way down. The player now drops its glass the moment it starts shrinking and lets the bar's own show through.\n- The mini player no longer settles a couple of points off where it sits at rest when the tab bar is collapsed. The two positions the pill can occupy -- above the tab bar, or merged into it after scrolling -- don't sit the same way, and the landing now accounts for whichever one it is coming home to, worked out at the moment it closes rather than at the moment it opened.",
-      "size": 11322124,
+      "version": "0.19.2",
+      "versionDate": "2026-08-16T19:00:26Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.2/SwiftDrome.ipa",
+      "versionDescription": "- The songs on the Downloaded screen answer to swipes like the songs on every other screen: right for Play Next, left for Play Last, and a long press for those plus starring and keeping. They had a long-press menu only, so a swipe that worked on an album or a playlist did nothing here.",
+      "size": 11365364,
       "versions": [
+        {
+          "version": "0.19.2",
+          "date": "2026-08-16T19:00:26Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.19.2/SwiftDrome.ipa",
+          "size": 11365364,
+          "localizedDescription": "- The songs on the Downloaded screen answer to swipes like the songs on every other screen: right for Play Next, left for Play Last, and a long press for those plus starring and keeping. They had a long-press menu only, so a swipe that worked on an album or a playlist did nothing here.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.19.1",
           "date": "2026-08-16T18:56:16Z",
