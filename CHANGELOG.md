@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- The sideloading source now carries a second app entry, "SwiftDrome Nightly": an unsigned build of the latest development state, refreshed on every nightly build and replaced in place rather than versioned. It shares the stable app's identity, so installing it updates the app you have -- data, logins and downloads included -- and its version reads like `0.23.0-nightly.20260822.abc1234` so you can always tell which build is on the device.
+
 ## [0.23.0] - 2026-08-22
 
 - The companion tries to push the album shelves on Home. With the home screen up, every so often it dives into the mini player, comes back out at the right edge of the screen and walks along the bottom of one of the album rows to the rightmost cover that is fully on screen, plants its paws on that cover's right edge and heaves against it three times over -- the whole row jolts a few points to the left under each shove, holds, and springs back the moment the pet gives up. It stands there for a beat looking at what it failed to move, then walks off the way it came and is thrown back out of the mini player. Which row it picks is random, so it doesn't develop a favourite. Scroll the row away or open the full player mid-push and the errand is abandoned rather than played to a screen that has moved on.
