@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.23.0",
-      "versionDate": "2026-08-22T21:36:51Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.23.0/SwiftDrome.ipa",
-      "versionDescription": "- The companion tries to push the album shelves on Home. With the home screen up, every so often it dives into the mini player, comes back out at the right edge of the screen and walks along the bottom of one of the album rows to the rightmost cover that is fully on screen, plants its paws on that cover's right edge and heaves against it three times over -- the whole row jolts a few points to the left under each shove, holds, and springs back the moment the pet gives up. It stands there for a beat looking at what it failed to move, then walks off the way it came and is thrown back out of the mini player. Which row it picks is random, so it doesn't develop a favourite. Scroll the row away or open the full player mid-push and the errand is abandoned rather than played to a screen that has moved on.",
-      "size": 13490698,
+      "version": "0.23.1",
+      "versionDate": "2026-08-22T22:02:03Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.23.1/SwiftDrome.ipa",
+      "versionDescription": "- The companion keeps its footing when you scroll. Up on an album's play button, or leaning into a shelf on Home, it used to trail the content it was holding on to and catch up in steps while the page moved under it. It is now drawn as part of the button or the shelf for as long as it is on one, so it scrolls with them -- and a shove against a shelf no longer smears it back and forth as the row gives way.\n\n- The sideloading source now carries a second app entry, \"SwiftDrome Nightly\": an unsigned build of the latest development state, refreshed on every nightly build and replaced in place rather than versioned. It shares the stable app's identity, so installing it updates the app you have -- data, logins and downloads included -- and its version reads like `0.23.0-nightly.20260822.abc1234` so you can always tell which build is on the device.",
+      "size": 13647114,
       "versions": [
+        {
+          "version": "0.23.1",
+          "date": "2026-08-22T22:02:03Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.23.1/SwiftDrome.ipa",
+          "size": 13647114,
+          "localizedDescription": "- The companion keeps its footing when you scroll. Up on an album's play button, or leaning into a shelf on Home, it used to trail the content it was holding on to and catch up in steps while the page moved under it. It is now drawn as part of the button or the shelf for as long as it is on one, so it scrolls with them -- and a shove against a shelf no longer smears it back and forth as the row gives way.\n\n- The sideloading source now carries a second app entry, \"SwiftDrome Nightly\": an unsigned build of the latest development state, refreshed on every nightly build and replaced in place rather than versioned. It shares the stable app's identity, so installing it updates the app you have -- data, logins and downloads included -- and its version reads like `0.23.0-nightly.20260822.abc1234` so you can always tell which build is on the device.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.23.0",
           "date": "2026-08-22T21:36:51Z",
