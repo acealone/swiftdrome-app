@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.23.1] - 2026-08-22
+
+- The companion keeps its footing when you scroll. Up on an album's play button, or leaning into a shelf on Home, it used to trail the content it was holding on to and catch up in steps while the page moved under it. It is now drawn as part of the button or the shelf for as long as it is on one, so it scrolls with them -- and a shove against a shelf no longer smears it back and forth as the row gives way.
+
 - The sideloading source now carries a second app entry, "SwiftDrome Nightly": an unsigned build of the latest development state, refreshed on every nightly build and replaced in place rather than versioned. It shares the stable app's identity, so installing it updates the app you have -- data, logins and downloads included -- and its version reads like `0.23.0-nightly.20260822.abc1234` so you can always tell which build is on the device.
 
 ## [0.23.0] - 2026-08-22
