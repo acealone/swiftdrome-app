@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-08-22
+
+- The companion tries to push the album shelves on Home. With the home screen up, every so often it dives into the mini player, comes back out at the right edge of the screen and walks along the bottom of one of the album rows to the rightmost cover that is fully on screen, plants its paws on that cover's right edge and heaves against it three times over -- the whole row jolts a few points to the left under each shove, holds, and springs back the moment the pet gives up. It stands there for a beat looking at what it failed to move, then walks off the way it came and is thrown back out of the mini player. Which row it picks is random, so it doesn't develop a favourite. Scroll the row away or open the full player mid-push and the errand is abandoned rather than played to a screen that has moved on.
+
 ## [0.22.0] - 2026-08-22
 
 - Settings puts Storage right after Playback -- the two screens that matter while setting up streaming and downloads now sit together -- with Pets and Accessibility behind it. The playback-engine picker's summary is one line for both engines instead of changing with the choice, and the menu takes the width its labels need instead of hyphenating "Render (alpha)" mid-word.
