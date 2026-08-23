@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.26.0] - 2026-08-23
+
+- Up Next now holds the rest of the record you're playing as well as the songs you queued by hand -- one list, with every row draggable and removable by swiping. Dragging one of the album's own songs above the ones you queued adopts it: it keeps the place you put it in, and it stays with you when you start playing something else, exactly like a song you queued yourself. What the app gathers on its own still has its own section below.
+- Rearranging the queue now starts fetching straight away. Drag a song that isn't on the device yet to the front and its download begins there and then, instead of waiting for the current song to finish.
+- With shuffle on, the rest of the record and the automatically gathered songs are shuffled separately, so the album you put on finishes before the endless queue takes over -- rather than an automatic pick landing between two of its songs.
+- Removing one of the album's own songs from the queue no longer counts as turning down an automatic pick, so the endless queue is free to offer it again later. Only songs removed from the gathered section are remembered as unwanted, which was always the intent.
+- Podcast episodes no longer show a download bar behind the playhead. Episodes are streamed and let go of -- nothing is kept on the device and nothing is fetched ahead of them -- so the layer that fills as a song arrives was describing a download that never becomes anything, and disappeared with the episode when it ended. Songs are unchanged.
+
 ## [0.25.0] - 2026-08-23
 
 - Every song's long-press menu -- on albums, playlists, artists, search, favorites, downloads, the songs list and the queue -- gains "Start Radio": the song plays right away and the queue fills itself with similar music from your server, the way the endless queue already follows what you put on. Songs you had queued by hand survive and play after it. Podcast episodes don't offer it -- nothing is ever queued up behind an episode.
