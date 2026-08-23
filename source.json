@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "0.25.0",
-      "versionDate": "2026-08-23T20:37:07Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.25.0/SwiftDrome.ipa",
-      "versionDescription": "- Every song's long-press menu -- on albums, playlists, artists, search, favorites, downloads, the songs list and the queue -- gains \"Start Radio\": the song plays right away and the queue fills itself with similar music from your server, the way the endless queue already follows what you put on. Songs you had queued by hand survive and play after it. Podcast episodes don't offer it -- nothing is ever queued up behind an episode.\n- The endless queue runs out of road less often. It has always asked the server for songs similar to what's playing and fallen back to other songs by the same artists; now, when the artists have nothing left either, it draws random songs from the same genre, and when there's no genre to draw on, random songs from the whole library -- so a radio started from an obscure song keeps playing instead of going quiet. Podcast episodes are never among what it picks up.",
-      "size": 14976527,
+      "version": "0.26.0",
+      "versionDate": "2026-08-23T20:50:27Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.26.0/SwiftDrome.ipa",
+      "versionDescription": "- Up Next now holds the rest of the record you're playing as well as the songs you queued by hand -- one list, with every row draggable and removable by swiping. Dragging one of the album's own songs above the ones you queued adopts it: it keeps the place you put it in, and it stays with you when you start playing something else, exactly like a song you queued yourself. What the app gathers on its own still has its own section below.\n- Rearranging the queue now starts fetching straight away. Drag a song that isn't on the device yet to the front and its download begins there and then, instead of waiting for the current song to finish.\n- With shuffle on, the rest of the record and the automatically gathered songs are shuffled separately, so the album you put on finishes before the endless queue takes over -- rather than an automatic pick landing between two of its songs.\n- Removing one of the album's own songs from the queue no longer counts as turning down an automatic pick, so the endless queue is free to offer it again later. Only songs removed from the gathered section are remembered as unwanted, which was always the intent.\n- Podcast episodes no longer show a download bar behind the playhead. Episodes are streamed and let go of -- nothing is kept on the device and nothing is fetched ahead of them -- so the layer that fills as a song arrives was describing a download that never becomes anything, and disappeared with the episode when it ended. Songs are unchanged.",
+      "size": 14997983,
       "versions": [
+        {
+          "version": "0.26.0",
+          "date": "2026-08-23T20:50:27Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v0.26.0/SwiftDrome.ipa",
+          "size": 14997983,
+          "localizedDescription": "- Up Next now holds the rest of the record you're playing as well as the songs you queued by hand -- one list, with every row draggable and removable by swiping. Dragging one of the album's own songs above the ones you queued adopts it: it keeps the place you put it in, and it stays with you when you start playing something else, exactly like a song you queued yourself. What the app gathers on its own still has its own section below.\n- Rearranging the queue now starts fetching straight away. Drag a song that isn't on the device yet to the front and its download begins there and then, instead of waiting for the current song to finish.\n- With shuffle on, the rest of the record and the automatically gathered songs are shuffled separately, so the album you put on finishes before the endless queue takes over -- rather than an automatic pick landing between two of its songs.\n- Removing one of the album's own songs from the queue no longer counts as turning down an automatic pick, so the endless queue is free to offer it again later. Only songs removed from the gathered section are remembered as unwanted, which was always the intent.\n- Podcast episodes no longer show a download bar behind the playhead. Episodes are streamed and let go of -- nothing is kept on the device and nothing is fetched ahead of them -- so the layer that fills as a song arrives was describing a download that never becomes anything, and disappeared with the episode when it ended. Songs are unchanged.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "0.25.0",
           "date": "2026-08-23T20:37:07Z",
