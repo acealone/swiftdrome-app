@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.25.0] - 2026-08-23
+
+- Every song's long-press menu -- on albums, playlists, artists, search, favorites, downloads, the songs list and the queue -- gains "Start Radio": the song plays right away and the queue fills itself with similar music from your server, the way the endless queue already follows what you put on. Songs you had queued by hand survive and play after it. Podcast episodes don't offer it -- nothing is ever queued up behind an episode.
+- The endless queue runs out of road less often. It has always asked the server for songs similar to what's playing and fallen back to other songs by the same artists; now, when the artists have nothing left either, it draws random songs from the same genre, and when there's no genre to draw on, random songs from the whole library -- so a radio started from an obscure song keeps playing instead of going quiet. Podcast episodes are never among what it picks up.
+
 ## [0.24.0] - 2026-08-23
 
 - The player's quote-bubble button now does what it always looked like it should: it opens the song's lyrics, arranged the way the queue is -- the cover shrinks up beside the title and the words take the screen. Lyrics the server has with timings (a `.lrc` file beside the song, or timed tags) follow the music: the line being sung is lit, the rest stand dimmed, the view scrolls along as the song advances -- and tapping any line takes playback exactly there. Lyrics without timings are simply there to read, and a song with none says so. Skipping to another song while the words are up swaps them for the new song's.
