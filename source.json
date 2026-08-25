@@ -266,6 +266,33 @@
       ],
       "beta": false,
       "minOSVersion": "26.0"
+    },
+    {
+      "name": "SwiftDrome Nightly",
+      "bundleIdentifier": "com.acealone.SwiftDrome",
+      "developerName": "acealone",
+      "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
+      "tintColor": "0a84ff",
+      "category": "Music",
+      "beta": true,
+      "subtitle": "Rolling build of the latest main commit",
+      "localizedDescription": "Unsigned nightly build of SwiftDrome, replaced on every nightly run. Installs over the stable app.",
+      "version": "0.28.0-nightly.20260825.2e19d00",
+      "versionDate": "2026-08-25T21:49:46Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/nightly/SwiftDrome.ipa",
+      "size": 15493429,
+      "versionDescription": "Unsigned nightly build of commit 2e19d00, built 2026-08-25T21:49:46Z. Replaced on every nightly build.",
+      "minOSVersion": "26.0",
+      "versions": [
+        {
+          "version": "0.28.0-nightly.20260825.2e19d00",
+          "date": "2026-08-25T21:49:46Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/nightly/SwiftDrome.ipa",
+          "size": 15493429,
+          "localizedDescription": "Unsigned nightly build of commit 2e19d00, built 2026-08-25T21:49:46Z. Replaced on every nightly build.",
+          "minOSVersion": "26.0"
+        }
+      ]
     }
   ],
   "news": []
