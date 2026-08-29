@@ -42,7 +42,7 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 - The queue keeps itself topped up with music like what's playing, so one song can carry on all evening. **Start Radio** on any song does the same thing on purpose.
 - Shuffle and repeat, and an option to leave very short tracks (intros, skits) out of what the queue picks for itself.
 - **Crossfade** of up to 12 seconds, and **gapless** playback for albums meant to run without breaks.
-- **Two ways of playing.** "System" is the normal one. "Render (alpha)" is a newer one that's better at joining songs and jumping around inside them — see the FAQ below.
+- **Two ways of playing.** "Render (beta)" is the default: it plays the audio itself, and it's better at joining songs and jumping around inside them. "System" hands the file to iOS instead — see the FAQ below.
 - **Volume levelling** (ReplayGain), so a loud remaster doesn't arrive twice as loud as the track before it.
 - **Dragging the progress bar lands where you dropped it**, which isn't a given on iOS — see the FAQ.
 - **Separate quality for Wi-Fi and mobile data.** At home you get the original file; on data you get a smaller version by default. If a connection can't keep up, the app fetches a smaller copy so the music keeps playing, and gets the good one next time.
@@ -104,11 +104,11 @@ The app keeps a handful of songs around what you're listening to: the next two, 
 
 It's temporary — it clears itself out and stays inside the storage limit in Settings. **Keep** is the other thing: a song, album or playlist you keep on purpose isn't part of that, isn't deleted on its own, and only goes when you remove it.
 
-### What is "Render (alpha)", and should I turn it on?
+### What is "Render (beta)", and why is it on?
 
-It's a second way of playing music. The normal one hands the file to iOS and lets it get on with it. This one plays the audio itself, which means it can put one song straight after another with genuinely nothing in between, and land exactly where you drop the progress bar.
+It's how the app plays music now. The other way, "System", hands the file to iOS and lets it get on with it. Render plays the audio itself, which means it can put one song straight after another with genuinely nothing in between, and land exactly where you drop the progress bar.
 
-It's marked alpha because bits are still missing rather than because it breaks — a few joins fall back to a small gap. The normal player stays the default. If gapless albums matter to you, it's worth trying; the switch is in Playback settings and you can go back at any time.
+It's marked beta because bits are still missing rather than because it breaks — a few joins fall back to a small gap. It only takes songs already on the phone; anything still arriving over the network plays on System regardless. If it doesn't suit you, the switch is at the top of Playback settings and you can go back at any time.
 
 ### Why did the quality drop in the middle of a song?
 
