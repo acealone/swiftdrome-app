@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/acealone/swiftdrome-app/main/source.json
 
 Builds are unsigned `.ipa`s built from the private SwiftDrome source repo and published here as GitHub Release assets on each tagged version -- no Apple Developer account or signing involved. Suitable for sideloading tools that don't require a valid Apple signature.
 
-The source can also carry a second entry, **SwiftDrome Nightly**: a build of the newest, still-in-progress version, replaced every time rather than kept as separate versions. Installing it replaces the normal app and keeps your settings and downloads.
+The source can also carry a second entry, **SwiftDrome Nightly**: a build of the newest, still-in-progress version, replaced every time rather than kept as separate versions. It installs as its own app next to the normal one -- separate icon, separate library cache, and its own server login to enter once -- so you can try it without touching the stable install.
 
 See [CHANGELOG.md](CHANGELOG.md) for release history.
 
