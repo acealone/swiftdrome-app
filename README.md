@@ -61,7 +61,7 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 ### Look and feel
 
 - Apple's Liquid Glass on the tab bar, mini player and search field, with plain content behind it. The mini player grows into the full player rather than opening a new screen.
-- Light, dark or automatic, four accent colours, English and German. Both can be changed inside the app, which matters if you're running it in something like LiveContainer.
+- Light, dark or automatic, six accent colours, English, German, Spanish, Italian and French. All of them are set inside the app, so they work the same whether it is installed on the device or running in something like LiveContainer.
 - Left-handed mode, which mirrors the buttons on album, artist and playlist screens.
 - A small pixel-art companion on the mini player. On by default, and switchable off in Settings → Pets.
 - Custom login headers, if your server sits behind something that needs one.
