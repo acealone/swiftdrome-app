@@ -1,0 +1,55 @@
+SwiftDrome
+
+Copyright (c) 2026 acealone. All rights reserved.
+
+This repository is the distribution source for SwiftDrome: the app's
+release builds, its changelog, and the AltStore/SideStore source metadata
+that points at them. The app's source code is not published here, and
+nothing in this notice grants any right in it.
+
+WHAT IS PERMITTED
+
+Installing and running a SwiftDrome build on a device you own, for your
+own personal use.
+
+WHAT IS NOT PERMITTED
+
+Except with the prior written permission of the copyright holder, no
+person may:
+
+  1. redistribute, republish, mirror, repackage or sell a build, or offer
+     one from any source other than this repository;
+  2. modify a build, or create derivative works from it;
+  3. reverse engineer, decompile or disassemble a build, except as far as
+     applicable law expressly permits despite this restriction;
+  4. remove or obscure this notice, any notice of authorship, or the
+     credits the app displays.
+
+UNSIGNED BUILDS
+
+The .ipa files published here carry no Apple code signature. They are
+offered for sideloading with tools that do not require one, and the
+decision to install one is the installer's own.
+
+THIRD-PARTY MATERIAL
+
+SwiftDrome includes work belonging to other people, covered by its own
+terms rather than by this notice. The app lists it under
+Settings > Acknowledgements: what each piece of work is, who it belongs
+to, and the terms it is used under.
+
+YOUR MUSIC AND YOUR SERVER
+
+SwiftDrome plays music from a server you provide. Nothing about the music
+that server holds, or your right to it, comes from this notice or from
+the copyright holder.
+
+NO WARRANTY
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THIS SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THIS SOFTWARE.
