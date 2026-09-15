@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [0.41.0] - 2026-09-15
+
+- Holding the back or next button on Now Playing scans through the track at 4x, and you hear it. Holding next plays the song racing past; holding back steps through it in two-second pieces, laid down back to front, the way a tape deck sounds when it scans. Let go and playback carries on from wherever you got to. A tap is still a skip, and a hold never also skips the track. The same thing works on the episode arrows for a podcast, alongside the fifteen-second steps that were already there.
+
+- The lock screen, Control Center and CarPlay got the same gesture. Press and hold their back or next button and the track scans exactly as it does in the app, so the most common place to want it is no longer the one place it was missing. A short press still skips the track.
+
+- Where the track cannot be scanned by ear, the seek bar scans instead. A song still arriving over the wire cannot be stepped backwards without asking the server for it again, several times a second, so holding back there moves the playhead and the clock at the same 4x and jumps playback there when you let go. Holding next is audible whatever is playing, and anything on the device -- which is most listening -- is audible in both directions.
+
+- A rewind that runs back out of the part of the song that is actually on the device goes quiet rather than going back to the server. Rewinding through a track that is still downloading eventually reaches a second that never arrived -- most often because the download was restarted from the middle earlier in the song, so nothing before that point was ever kept. Playing that second would mean asking the server for the song again, and doing it every half second, each request throwing away the bytes that had arrived in the meantime, so the download lost ground for as long as the button was held. Now the scan simply stops making a sound at that point and carries on at the same speed as a moving seek bar, and the download is left alone.
+
+- You can feel the scan as well as hear it: a tap as the press stops being a skip, and a firmer one when a rewind runs back into the start of the track and stops. It is the one control that gets used without looking at it.
+
+- The speed slider in Settings still stops at 2x. The scan is faster than anything the slider offers, but it is only ever held, never set: it goes back to your own speed the moment you let go, and it cannot survive a relaunch.
+
 ## [0.40.0] - 2026-09-14
 
 - Playback speed and pitch have a control on the player. The speedometer at the end of the row under the transport opens a sheet with a slider for each: speed from half to double, pitch up or down by six semitones without touching the tempo. Both are heard while the slider moves, which is the only way anyone sets either -- you drag until the voice sounds right rather than picking a number and hoping. Let go and it is written down; a speed set once is still set after a relaunch, and the speedometer stays tinted while it is, so a podcast left at 1.5x is never a song sounding wrong with nothing on screen to say why. One button puts both back to normal. The lock screen and the car know the real speed too, so the scrubber there tracks the music instead of drifting a third of a track behind it.
