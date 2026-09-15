@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.42.1] - 2026-09-15
+
+- This is 0.42.0, arriving. The builds for 0.41.0 and for 0.42.0 were both made and both tagged, and neither was ever published here: a change to the release workflow left the step that uploads the .ipa and updates the app list skipped, so the newest version on offer stayed 0.40.0 while two releases came and went. Nothing about the app is different from 0.42.0. Installing this gets you everything listed under 0.41.0 and 0.42.0 below, which is to say holding back or next to scan through a track, and the Acknowledgements screen under Settings > Support.
+
 ## [0.42.0] - 2026-09-15
 
 - Settings has an Acknowledgements screen, under Support and above Buy me a coffee. It names the work in the app that is somebody else's -- what each one does here, who it belongs to and the terms it is used under -- and each entry opens the project's own page. Three of them to begin with: Last.fm, whose listener counts, similar artists and Home mixes the app reads; SQLite, the database your library is kept in on the device; and Swift Crypto, which hashes your login where the app is built on Linux. A footnote says plainly that SwiftDrome is not affiliated with Navidrome, Subsonic or Last.fm. Translated into all five languages the app carries. The pixel companion belongs on this screen too and is not on it yet -- the sprites are free to use, but nothing in the project ever recorded who drew them, and a name guessed at would read exactly like a real credit.
