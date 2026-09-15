@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.42.0] - 2026-09-15
+
+- Settings has an Acknowledgements screen, under Support and above Buy me a coffee. It names the work in the app that is somebody else's -- what each one does here, who it belongs to and the terms it is used under -- and each entry opens the project's own page. Three of them to begin with: Last.fm, whose listener counts, similar artists and Home mixes the app reads; SQLite, the database your library is kept in on the device; and Swift Crypto, which hashes your login where the app is built on Linux. A footnote says plainly that SwiftDrome is not affiliated with Navidrome, Subsonic or Last.fm. Translated into all five languages the app carries. The pixel companion belongs on this screen too and is not on it yet -- the sprites are free to use, but nothing in the project ever recorded who drew them, and a name guessed at would read exactly like a real credit.
+
+- Opening the queue or the lyrics from the player no longer puts the playing badge on the cover before the cover has got there. Both screens are the player rearranged: the artwork does not disappear and come back, it travels from full width down to the small square beside the title, and the dark patch with the three bars in it belongs on the small square. It was being painted the instant the button was tapped, so for the length of the morph a full-screen cover sat behind a full-screen scrim, and the queue read as arriving before its own artwork. The badge now fades in once the cover has finished travelling, and comes off before it starts back out, so the way in and the way out both show a clean cover. Moving between the queue and the lyrics leaves it alone, because the cover does not move there.
+
 ## [0.41.0] - 2026-09-15
 
 - Holding the back or next button on Now Playing scans through the track at 4x, and you hear it. Holding next plays the song racing past; holding back steps through it in two-second pieces, laid down back to front, the way a tape deck sounds when it scans. Let go and playback carries on from wherever you got to. A tap is still a skip, and a hold never also skips the track. The same thing works on the episode arrows for a podcast, alongside the fifteen-second steps that were already there.
