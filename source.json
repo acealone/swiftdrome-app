@@ -397,19 +397,19 @@
       "beta": true,
       "subtitle": "Rolling build of the latest development commit",
       "localizedDescription": "Unsigned nightly build of SwiftDrome, replaced on every nightly run. Installs alongside the stable app, with its own icon, library cache and server login.",
-      "version": "0.42.1-nightly.20260919.2f365e1",
-      "versionDate": "2026-09-19T08:14:03Z",
+      "version": "0.43.0-nightly.20260920.b1e5f0c",
+      "versionDate": "2026-09-20T08:46:25Z",
       "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/nightly/SwiftDrome.ipa",
-      "size": 23742576,
-      "versionDescription": "Unsigned nightly build of commit 2f365e1, built 2026-09-19T08:14:03Z. Replaced on every nightly build.",
+      "size": 23890918,
+      "versionDescription": "Unsigned nightly build of commit b1e5f0c, built 2026-09-20T08:46:25Z. Replaced on every nightly build.",
       "minOSVersion": "26.0",
       "versions": [
         {
-          "version": "0.42.1-nightly.20260919.2f365e1",
-          "date": "2026-09-19T08:14:03Z",
+          "version": "0.43.0-nightly.20260920.b1e5f0c",
+          "date": "2026-09-20T08:46:25Z",
           "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/nightly/SwiftDrome.ipa",
-          "size": 23742576,
-          "localizedDescription": "Unsigned nightly build of commit 2f365e1, built 2026-09-19T08:14:03Z. Replaced on every nightly build.",
+          "size": 23890918,
+          "localizedDescription": "Unsigned nightly build of commit b1e5f0c, built 2026-09-20T08:46:25Z. Replaced on every nightly build.",
           "minOSVersion": "26.0"
         }
       ]
