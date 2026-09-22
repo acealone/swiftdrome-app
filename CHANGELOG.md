@@ -2,11 +2,34 @@
 
 ## [Unreleased]
 
+## [0.44.0] - 2026-09-22
+
+- In Render mode the app now decodes Opus, AAC and MP3 for itself instead of handing the file to the system's reader. That reader decided how long a song was the moment it opened it, from the bytes it was told to expect and the bitrate of the first few seconds, and stopped there: a song with a dense opening read as shorter than it was, the app fetched the missing tail and joined it on, and the join could be heard as a short stutter. The app's own reader walks the file's own frames and pages, so the song ends where its audio ends and nothing has to be stitched on. Seeks in these files are exact to the frame, and a seek into an Opus or AAC copy on the device no longer needs the file cut for it. FLAC, WAV and AIFF are read as before, and the decks are untouched. Settings > Debug > Logs shows `Decoding <file> as opus packets` under `player` when the new reader is in use, and `reading opus through AVFoundation instead` if the device could not provide the decoder, in which case everything plays as it did before.
+
+- Animated covers are made ready before you play them, rather than while you are looking at the screen that wants one. Converting a cover to the video the app and the Lock Screen play takes about a minute, and it used to start when the song did: the first play of an album showed the still cover, and the Lock Screen often gave up waiting and drew the still one too. The library is converted behind the sync now, so an album that has been through a pass moves from the moment its cover appears, on both screens.
+
+- That pass runs on Wi-Fi only, and never while a song is being fetched. Finding out whether a cover moves means downloading it whole, because no server can resize an animated one, so a library's worth of covers is a bill nobody chose track by track. Low Data Mode stops it, audio always goes first, and a pass that stops picks up where it left off at the next sync rather than starting again.
+
+- Settings > Storage says what it is doing while it does it: which album is being fetched, and how far through your library it has got. The bar counts your whole collection rather than this one pass, so it still reads true after the pass has stopped on the train and resumed at home.
+
+- Settings > Storage > Browse Covers lists the covers this device converted, as a grid you can look through. Tap one to watch it, and Remove takes it off the disk. Until now the only thing the app could say about them was a count and a size, since the files are named after a hashed cover id rather than an album. A cover you remove stays removed: it is not converted again until the animated covers are cleared.
+
+- The Animated Covers switch moved from Settings > Accessibility to Settings > Appearance. Reduce Motion is an accessibility setting; a cover that moves is something people turn on because they like it and off because they find it busy, and that lives with the rest of what the app looks like. Turning it on now starts a conversion pass straight away instead of waiting for the next sync, and turning it off still throws the converted videos away.
+
+- An iPhone converts each cover once instead of twice. The tall file the Lock Screen wants is the same picture the app's own screen draws, scaled to the same width, so Now Playing plays that one and the square copy is no longer written. Half the encoding and half the disk for the same two screens.
+
+- Converting animated covers no longer needs the app open. A pass that is running when you leave the app gets the usual grace period to go on, and one that stops with covers left over asks iOS to finish the job in the background, which it does while the phone is charging and on a network, usually overnight. The same rules hold as in the app: Wi-Fi only, never in Low Data Mode, and nothing at all with Animated Covers switched off. Settings > Debug > Logs shows `iOS started a background run` under `cache` when it happens.
+
+- Settings > Debug can name the player that is actually playing. With the new switch on, the line under the seek bar on Now Playing starts with "Engine" or "Deck 0", so a song the Render engine hands over to a deck partway through shows it at the moment it happens rather than only in the log. Off by default.
+
+- The Acknowledgements screen names the pixel squirrel on the mini player: "Nutty" by Duckhive, given away under CC0. It was the gap that screen was built around, left empty rather than filled with a guess that would have read like a real credit.
+
 ## [0.43.0] - 2026-09-19
 
 - In Render mode, a streamed Opus, AAC or MP3 song no longer runs out early and has the rest of it stitched on. The reader settles how long the song is the moment it opens, from the bytes it was told to expect and the bitrate of the first few seconds, and it stops there whatever is behind it: a song with a dense opening read as shorter than it was, and the app had to fetch the missing tail and join it on, which could be heard as a short stutter. The reader is now told a length that errs long, the way a transcode always was, so it reads to the real end of the audio and the join is not needed. Settings > Debug > Logs shows the length announced under `cache`, marked "padded for the engine's reader".
 
 - Seeks and joins into an Opus or AAC file on the device are cleaner at the seam. A cut used to begin exactly on the page or frame holding the moment, so the decoder started cold there and the first few milliseconds after the seam could be wrong. The cut now begins a decoder's run-up ahead of the moment, 80 ms for Opus and one frame for AAC, and that run-up is decoded and dropped rather than heard.
+
 
 - Play Next and Play Last now start the song when nothing is playing. On a fresh install, straight after signing in, or once the queue has run out, lining a song up used to do nothing at all: there was no sound, no mini player, and no way back to the song, since the queue screen only exists while something is loaded. The song plays straight away now, and anything else you line up builds behind it as usual. Queueing a whole album or playlist that way starts it at its first track rather than its last. With a track already playing, both still line songs up without interrupting anything.
 
