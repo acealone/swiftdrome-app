@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## [0.46.0] - 2026-09-25
+
+- Songs can be shared as a public link. Touch and hold a song anywhere, or open the ellipsis menu on Now Playing or a queue row, and choose Share Song: the app makes a link on your Navidrome server that anyone can open in a browser, without an account, and shows it in a sheet with Copy Link, Share Link and an Expires row to shorten how long it works. Sharing the same song again hands out the link already made instead of a second one. Settings > Debug > Logs shows `Share: created link <id> for song <id>` or `Share: reusing link <id> for song <id>` under `ui`.
+
+- Settings > Server has a new Shares screen that lists every link you have made, newest first, with how often each has been opened and when it expires. Opening one shows the link, lets you give it a description or change its expiry, lists the songs behind it, and has Delete Link at the bottom. Touch and hold a row to copy, share or delete without opening it. On a server where sharing is turned off, the screen says so instead of showing an error, and the app no longer treats that answer as the server being unreachable.
+
+- The login screen has a Local address field under Server URL, the same one Settings > Server offers, so a server that is reachable on the home network as well as over the internet can be given both addresses when you sign in instead of afterwards. It is optional: leave it empty and nothing changes. It takes a private IP address with an optional port, such as 192.168.178.20:4533, and says so under the field if what was typed is not one, with Sign In held until it is corrected or cleared. Signing in still goes to the Server URL; the local address is tried right after, the way it is when set in Settings, and Settings > Server shows which of the two is in use. Settings > Debug > Logs shows `Local address set at login: <address>` under `network`.
+
+- The Sign In button on the login screen, and the Remove and Restore buttons under an animated cover in Settings > Storage, are now the standard iOS height for a full-width button. They were drawn noticeably taller than any button the system draws.
+
+- The Song Info sheet and the animated cover sheets now have the same header as the Quick settings sheet: the drag handle in the same place, and the Close button in the same top right position, at the same size and in the same colour, instead of sitting noticeably further down in smaller text. The animated cover sheets leave more room between the Close button and the cover. Song Info no longer repeats "Song Info" as a title above the track, which is named right under the header.
+
+- A cover you removed from Settings > Storage > Browse Covers can now be brought back on its own. Settings > Storage has a Removed Covers screen whenever something is in it. It looks like Browse Covers: the same grid in alphabetical order, and tapping a cover opens it with a Restore button at the bottom, where Browse Covers has Remove. A restored cover is converted to video again on the next pass. Until now the only way back was Clear Animated Covers, which deletes every converted cover and has the whole library looked at again. Settings > Debug > Logs shows `Animated artwork: restored <id>, it is converted again on the next pass` under `cache`.
+
+- The Close button on the Song Info sheet and on the animated cover sheets is now a rounded glass button with the word in your accent color, instead of a filled accent capsule with white text that read like Done. On the animated cover sheets, Remove is now red and Restore green, whatever accent you picked, and these sheets and Song Info show the drag handle with the same room above it as on the Quick settings sheet.
+
+- Turning off Animated Artwork in Settings > Appearance now asks first. Switching it off deletes every cover the app has converted to video, which can be hundreds of megabytes and a long while on Wi-Fi to make again, so a confirmation now names how much will go and lets you back out. If nothing has been converted yet, the switch just turns off.
+
+- The Quick settings button on Now Playing has a new icon, a settings cog, so it no longer looks like the queue button beside it.
+
+- Every screen inside Settings now has the close button in its top right corner, not just the first one. From Settings > Appearance > Home Screen, the equalizer, a crash report or any other screen you have opened from Settings, tapping it closes Settings in one go instead of backing out one screen at a time. The back button still takes you one screen back.
+
+- The Quick settings sheet on Now Playing now has a Close button in its top right corner, a rounded glass button with the word in your accent color like the other sheets, so you no longer have to swipe it down to get back to the player.
+
 ## [0.45.0] - 2026-09-24
 
 - Music no longer stops a few seconds after you leave the app while animated covers are being converted. The conversion used to carry on in the background, and turning one cover into video is about a minute of heavy work, more than iOS allows an app that is only meant to be playing music: it closed the app, and the song with it, without anything reaching the log. The conversion now stops the moment you leave the app and picks up where it was when you come back, and whatever is left over is still finished overnight on the charger as before. Settings > Debug > Logs shows `the app left the screen, leaving the rest of the pass for a background run` under `cache` when it steps aside.
