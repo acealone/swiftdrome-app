@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.48.0] - 2026-09-27
+
+- With left-handed controls on, the progress bar under a part-heard podcast episode fills from the left again. It was mirrored along with the rest of the row, so it filled from the right and read as time left rather than time heard.
+
+- Animated covers take up several times less space on the phone. They are now stored as HEVC video at a bitrate sized for a cover, instead of H.264 at whatever the encoder picked for camera footage. The first launch after updating clears the animated covers stored by earlier versions and converts them again in the background, so an animated cover shows as a still one until its turn comes round. Closing the app partway through a conversion no longer counts against a cover: it is picked up again on the next pass. Settings > Debug > Logs shows `Animated artwork <id>: <n> frames, HEVC, <size> MB` under `cache` for each cover written.
+
+- Settings > Storage now counts only finished animated covers. It used to include the one being converted, so it could report a cover while the Animated Covers screen it opens showed none.
+
+- Songs can be kept out of Auto Queue. Long-press a song, or open the menu on Now Playing, and choose Don't Suggest: the queue stops picking it on its own, while it still plays whenever you choose it, and an album or playlist you put on still plays through whole. Settings > Playback has a Skip songs you excluded switch next to Skip short tracks, and a Not Suggested list of every song marked this way, where Suggest Again takes one back off.
+
 ## [0.47.0] - 2026-09-27
 
 - The app can sign in to a server that asks for a client certificate (mutual TLS). The login screen has a Client Certificate card under Custom Headers: choose a PKCS#12 file (.p12 or .pfx) from the Files app, or copy the file in the Files app (or its Base64 text) and tap Paste Certificate where the file picker will not offer it, as under LiveContainer; type the passphrase it was exported with, and sign in. The certificate is presented in the TLS handshake on every request the app makes, including audio, downloads and cover art, and it is kept with the login in the keychain. A file that does not open, or opens with a different passphrase, is refused on the spot with the reason instead of a failed connection. Settings > Server has a Client Certificate row that names who the certificate was issued to, and a screen behind it that shows the issuer and expiry date, marks an expired one in red, and lets you replace or remove it without signing out. Settings > Debug > Logs shows `Client certificate in force: <name>, valid until <date>` under `auth` and `Presenting <name> to <host>` under `network`. With a certificate set, the player never fetches a stream by itself, since it cannot present one: a track whose container keeps its index at the end (an M4A or ALAC file streamed as is) starts once it has fully arrived, and a seek in a transcoded stream on the system engine stays approximate, the way it does on a server that ignores the time offset. Neither changes anything for a login without a certificate.
