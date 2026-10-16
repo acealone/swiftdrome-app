@@ -2,6 +2,46 @@
 
 ## [Unreleased]
 
+## [0.49.0] - 2026-10-17
+
+- Home now shows placeholder shelves while your library loads, instead of a "nothing to show" message.
+
+- Jams: listen together with people nearby, over Wi-Fi or Bluetooth. Guests join with a code, add songs and skip, while the music plays only on the host's phone.
+
+- Removing an animated cover now asks for confirmation first.
+
+- The mini player no longer drains battery scrolling long titles while the full player covers it.
+
+- A sleep timer now stops the music even when it runs out while a song is buffering.
+
+- With crossfade on, a track shorter than the fade no longer stops the music: it now plays on its own and the queue carries on.
+
+- Add to Playlist: put a song into one or more of your playlists, or a new one, from any song's menu or the player's menu. Playlists are now listed newest first.
+
+- Refreshing the library is quicker and writes much less to the phone's storage.
+
+- Playing a song that is already on the phone no longer drains battery checking how long it is.
+
+- The grouped cards in Settings, Login, Library, Quick settings and the Jam sheets are now a flat panel instead of frosted glass, which is left to the tab bar and the mini player floating above them. Pressing a row still highlights it.
+
+- Sheets now use the system's grab handle and Close button, so they look and work like the rest of iOS, with Close in the top left, or in the top right where Back takes that corner.
+
+- The app now fits larger screens: cover grids gain columns as the screen widens, and on iPad the tab bar can turn into a sidebar listing every Library section.
+
+- In Light mode every accent colour is a shade darker, so text drawn in it is easy to read.
+
+- Larger text sizes now reach Now Playing, the mini player, lyrics, the Home session banner and the equalizer.
+
+- The small buttons on the full player, and the AirPlay button, are easier to hit.
+
+- With Reduce Motion on, the pet stays hidden and the player, lyrics and queue no longer animate.
+
+- VoiceOver can now reach the mini player's Play/Pause and Next buttons.
+
+- Signing in works with Password AutoFill, Return moves to the next field, and an unusable server address is now explained under the field.
+
+- Shortcuts and Siri now start playback without opening the app.
+
 ## [0.48.0] - 2026-09-27
 
 - With left-handed controls on, the progress bar under a part-heard podcast episode fills from the left again. It was mirrored along with the rest of the row, so it filled from the right and read as time left rather than time heard.
@@ -167,17 +207,17 @@
 
 - You can ask Siri for music. "Spiele Bohemian Rhapsody von Queen auf SwiftDrome", "Spiele Abbey Road von den Beatles auf SwiftDrome", "Spiele Musik von Portishead auf SwiftDrome", "Spiele meine Lieblingslieder auf SwiftDrome", "Spiele zufällige Lieder auf SwiftDrome", "Spiele die nächste Podcastfolge auf SwiftDrome". A song, a record, an artist, a playlist, a genre or a show, by name, with or without the artist behind it. What is played comes out of your own library and your own server, the way tapping it would: a song plays on into the rest of its record, an artist plays their best known songs, a request with nothing named at all shuffles the library, and a podcast picks up where you left off.
 
-- It works in every language Siri speaks, not only the five the app is translated into. The sentences are not the app's: they are the media requests iOS itself understands, so Siri parses them with its own grammar and hands the app what it worked out. Say it in Japanese and it works in Japanese, and nothing has to be added here for a language to arrive.
+  It works in every language Siri speaks, not only the five the app is translated into. The sentences are not the app's: they are the media requests iOS itself understands, so Siri parses them with its own grammar and hands the app what it worked out. Say it in Japanese and it works in Japanese, and nothing has to be added here for a language to arrive.
 
-- Turn it on in Settings > Integrations > Siri & Shortcuts. iOS never asks on an app's behalf, so nothing about your phone changes until you tap Allow on that screen. The same screen lists a few sentences to try and says plainly whether Siri has been allowed, refused, or never asked, so a request that goes nowhere has somewhere to explain itself.
+  Turn it on in Settings > Integrations > Siri & Shortcuts. iOS never asks on an app's behalf, so nothing about your phone changes until you tap Allow on that screen. The same screen lists a few sentences to try and says plainly whether Siri has been allowed, refused, or never asked, so a request that goes nowhere has somewhere to explain itself.
 
-- Twenty-three actions in the Shortcuts app, for automations. Play a song, a record, an artist, a playlist, a genre or a decade; play your favourites, the newest albums, what you have played most, or what is downloaded to the device; start a radio from a song; carry on, pause, next, previous; favourite the song that is playing; set shuffle, set repeat, set a sleep timer; and ask what is playing, which answers with a value an automation can branch on. Shuffle the library when the car connects, start the next episode at seven, set a sleep timer when a focus turns on.
+  Twenty-three actions in the Shortcuts app, for automations. Play a song, a record, an artist, a playlist, a genre or a decade; play your favourites, the newest albums, what you have played most, or what is downloaded to the device; start a radio from a song; carry on, pause, next, previous; favourite the song that is playing; set shuffle, set repeat, set a sleep timer; and ask what is playing, which answers with a value an automation can branch on. Shuffle the library when the car connects, start the next episode at seven, set a sleep timer when a focus turns on.
 
-- "The next podcast episode" means what a listener means by it. An episode left half-finished is picked back up where it stopped, rather than being skipped past. Where the last one was finished, the one released after it starts. Where nothing in the show has ever been played, the newest episode starts, because a show you ask for is a show you want the latest of, not episode one. And a show heard to its end says so instead of replaying something.
+  "The next podcast episode" means what a listener means by it. An episode left half-finished is picked back up where it stopped, rather than being skipped past. Where the last one was finished, the one released after it starts. Where nothing in the show has ever been played, the newest episode starts, because a show you ask for is a show you want the latest of, not episode one. And a show heard to its end says so instead of replaying something.
 
-- Two things about Siri depend on how the build reached your phone, and they are worth knowing before testing. Siri needs a capability Apple reserves for paid developer accounts; a sideloader that signs with a free Apple ID replaces it, and the app then installs and runs exactly as before with Siri simply never offering it. The Shortcuts actions need a step in the build that the Linux toolchain this project uses does not yet run, so in the builds published here they do not appear in the Shortcuts app yet. Both are limits of the build rather than of the app, and neither affects anything else. The Siri & Shortcuts screen works out which of the two it is looking at and says so, rather than listing sentences and automations that build cannot answer.
+  Two things about Siri depend on how the build reached your phone, and they are worth knowing before testing. Siri needs a capability Apple reserves for paid developer accounts; a sideloader that signs with a free Apple ID replaces it, and the app then installs and runs exactly as before with Siri simply never offering it. The Shortcuts actions need a step in the build that the Linux toolchain this project uses does not yet run, so in the builds published here they do not appear in the Shortcuts app yet. Both are limits of the build rather than of the app, and neither affects anything else. The Siri & Shortcuts screen works out which of the two it is looking at and says so, rather than listing sentences and automations that build cannot answer.
 
-- Settings > Debug > Logs has a new `voice` filter. A request made by voice leaves no other trace, so this is the one place that says whether Siri reached the app, what it thought was said, and which song it matched.
+  Settings > Debug > Logs has a new `voice` filter. A request made by voice leaves no other trace, so this is the one place that says whether Siri reached the app, what it thought was said, and which song it matched.
 
 - Custom headers added at login now travel with the music as well as the browsing. On a server behind something that authenticates by header, the library would load and everything in it would refuse to play: the requests for the audio, for the copy kept on the device, and for the cover art were the only ones going out without the header that let you log in. They carry it now, on both playback engines -- the streams the Render engine opens for itself, and the ones the system player opens, including the range requests a seek makes.
 
@@ -264,6 +304,8 @@
 - Podcast episodes that had stopped playing play again. A show whose files get re-imported on the server -- which is what a podcast downloader does every time it tidies up, re-tags or moves an episode -- keeps its name, its artwork and its episode count, and gets a brand new internal id for every single episode. The app had no way of noticing: it only re-read a record's list of songs when the number of songs or the total running time changed, and neither had. So it went on asking for episodes by ids the server had thrown away, the server answered every one of them with "I do not have that", and the app handed that answer to the audio player as though it were the episode. What you heard was nothing, and what the log said was a decoder error, which is exactly the wrong place to look. Three things are fixed. The app now checks that what came back from the server is audio at all, and says so plainly in the log when it is not, quoting the server's own words. When the server says it has no such track, the app re-reads that record on the spot, finds the same episode under its new id and plays it, carrying your place in it across and fixing up the rest of the queue at the same time, so you lose a second rather than an evening. And a full sync re-reads every record's songs, so the ids in the library are the ids the server currently has.
 
 - A full sync now costs a request per record, every time, which is what the button always said it does. It used to skip any record whose list of songs it already had, which made it fast and made it unable to repair exactly the problem above. A quick sync is unchanged: it still looks only at what is new. The first launch after this update runs one full sync by itself to replace the ids it was holding.
+
+- Songs that left the library stop haunting search. Search runs against the index the app keeps on the device, and when a song disappeared from an album it was already in -- a file moved, a tag rewritten, a duplicate cleaned up, anything that changes the id the server gives it -- the song went out of the library but its entry in the search index stayed behind for good. Those leftovers still matched what you typed and still took up room among the results, and then turned out to point at nothing, so searching returned fewer and fewer real songs the longer a library had been tidied, with nothing to say why a song you knew was there had stopped coming up. A song leaving an album now takes its search entry with it, and the next full sync clears out every entry left over from before, so an index that had been quietly losing results gets them back without anyone having to reset it.
 
 - Songs no longer stop short of their own end while streaming. A song arriving from the server is handed to the audio reader as soon as enough of it has landed to start playing, which can be a second before the whole of it is there -- and the reader settles on how long the song is at that moment, from the fraction it has, and never revises it. For one 3:43 track that meant reading to 3:20 and stopping, with the last 900 kilobytes sitting on the device having never been asked for. It looked random because it depends on how the opening of a song compares to its average, and it never happened on a song already downloaded, which is why playing the same track a second time worked. The app now notices that the reader gave out before the song did and reads the rest out of the copy on the device, which by then is whole -- joined onto the end of what is already playing, so there is nothing to hear at the join.
 
