@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-02
+
+- Animated album covers now start moving a second or two after a song starts, in the app and on the Lock Screen, and no longer fill your storage: only the last two are kept. A new switch lets them load over cellular.
+
+- Opening Search no longer raises the keyboard over your recent searches and the year chart. Tap the field when you want to type.
+
+- Sharing a link now opens the share sheet with the song's title and cover at the top, instead of a bare address.
+
+- Share links made or copied at home now use your server's public address, so whoever you send them to can open them.
+
+- Connecting to a car or other Bluetooth stereo no longer switches repeat or shuffle on by itself.
+
+- During a podcast episode, the next and previous buttons on a car or Bluetooth headset now jump 15 seconds forward or back instead of changing episode.
+
 ## [0.49.0] - 2026-10-17
 
 - Home now shows placeholder shelves while your library loads, instead of a "nothing to show" message.
