@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/acealone/swiftdrome-app/main/source.json
 
 ## Requirements
 
-- **iOS 26 or later.**
+- **iOS 26 or later.** iPhone and iPad.
 - **Your own music server.** Navidrome is what the app is built and tested against; other Subsonic-compatible servers work too, as far as they support the same features.
 
 ## About the builds
@@ -21,35 +21,53 @@ Builds are unsigned `.ipa`s built from the private SwiftDrome source repo and pu
 
 The source can also carry a second entry, **SwiftDrome Nightly**: a build of the newest, still-in-progress version, replaced every time rather than kept as separate versions. It installs as its own app next to the normal one -- separate icon, separate library cache, and its own server login to enter once -- so you can try it without touching the stable install.
 
+### What these builds can't do
+
+A few features depend on how the app is built and signed rather than on the app itself. Everything else works the same in every build.
+
+- **Siri** needs a capability Apple only grants to paid developer accounts. Installed with a free Apple ID, the app works normally and Siri simply doesn't offer it.
+- **iCloud settings sync** has the same requirement. Without it, Settings > Integrations > iCloud says it isn't available in this build.
+- **Shortcuts actions** don't show up in the Shortcuts app in these builds yet: the tool that builds them can't produce the list iOS reads them from.
+
 See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## What the app does
 
 ### Your library
 
-- Artists, albums, songs, genres and playlists. Albums and artists are grouped by first letter, with a strip down the side to jump around.
-- Search, with tabs for artists, albums and songs.
-- Favourites for artists, albums, songs and shows, each with their own place in the Library tab and on Home.
-- Home shelves for recently played, recently added, most played, random albums, favourites and top artists -- tap a headline to see the whole list.
+- Artists, albums, songs, genres, decades, playlists and podcasts. Long lists have an A to Z strip down the side to jump around, and Songs, Artists, Albums and Playlists have a search field: pull the list down and type to narrow it.
+- Search, with tabs for top results, artists, albums and songs. Before you type, it shows your recent searches and a chart of your albums by year.
+- **Decades**: browse your library by decade, best-known songs first, with an option to hide duplicate versions of the same song.
+- Favourites for artists, albums, songs and shows, each with their own list in the Library tab.
+- Home shelves for recently played, recently added, most played, random albums, favourites, favourite podcasts, top artists, and **Continue Listening** for part-heard episodes. Reorder or hide them and pick their size in Settings > Appearance > Home Screen, and tap a headline to see the whole list.
+- Choose which two of the four tabs you want, from any Library section. On iPad the tab bar can become a sidebar.
 - Your library is copied onto the phone, so browsing is instant and works with no connection. The app checks for new music when it starts, and you can ask for a full refresh any time.
 - If your server has more than one library, you can pick which ones you want to see.
 - Cover art you've seen is kept on the phone, so browsing looks right offline too.
-- **Podcasts.** Any album tagged with a genre like "Podcast" shows up as a show, even if your server split it into several albums. Episodes are listed newest first, and playing one gives you skip-back-15, skip-forward-15 and previous/next episode instead of shuffle and repeat.
+- **Animated album covers** move on Now Playing, the album page and the Lock Screen, if the album has one. Switch them off, or allow them over mobile data, in Settings > Appearance.
+- **Podcasts.** Any album tagged with a genre like "Podcast" shows up as a show, even if your server split it into several albums. Episodes are listed newest first and show whether you've heard them and how much is left. A part-heard episode picks up where you stopped, and playing one gives you skip-back-15, skip-forward-15 and previous/next episode instead of shuffle and repeat -- on the Lock Screen and in the car too.
+- **Add to Playlist** from any song's menu, into one or more playlists or a new one.
+- **Share a song** as a public link that anyone can open, with an expiry date. Your links are listed in Settings > Server > Shares.
 
 ### Playing music
 
 - One queue, in the order you'll hear it: the rest of the record you put on plus anything you added yourself. Drag to reorder, swipe to remove. It's still there when you reopen the app.
-- The queue keeps itself topped up with music like what's playing, so one song can carry on all evening. **Start Radio** on any song does the same thing on purpose.
-- Shuffle and repeat, and an option to leave very short tracks (intros, skits) out of what the queue picks for itself.
+- The queue keeps itself topped up with music like what's playing, so one song can carry on all evening. **Start Radio** on any song does the same thing on purpose, and **Don't Suggest** keeps a song out of what the queue picks for itself.
+- Shuffle and repeat (including repeat for just the songs you queued yourself), and an option to leave very short tracks (intros, skits) out of what the queue picks for itself.
 - **Crossfade** of up to 12 seconds, and **gapless** playback for albums meant to run without breaks.
-- **Two ways of playing.** "Render (beta)" is the default: it plays the audio itself, and it's better at joining songs and jumping around inside them. "System" hands the file to iOS instead -- see the FAQ below.
+- **Two ways of playing.** "Render" is the default: the app plays the audio itself, which is better at joining songs and jumping around inside them, and is what makes the equalizer and pitch control work. "System" hands the file to iOS instead -- see the FAQ below.
+- **Equalizer** with ten bands and twelve presets, plus **speed and pitch** and the sleep timer in the player's Quick settings.
+- **Hold to scan**: hold back or next to race through a song at 4x and hear it go by, in the app, on the Lock Screen and in Control Center.
 - **Volume levelling** (ReplayGain), so a loud remaster doesn't arrive twice as loud as the track before it.
 - **Dragging the progress bar lands where you dropped it**, which isn't a given on iOS -- see the FAQ.
-- **Separate quality for Wi-Fi and mobile data.** At home you get the original file; on data you get a smaller version by default. If a connection can't keep up, the app fetches a smaller copy so the music keeps playing, and gets the good one next time.
-- Lyrics, following along line by line if your server has them with timings.
-- Sleep timer, AirPlay, lock screen controls, and music that comes back by itself after a phone call or an alarm.
-- **Pick up where another device left off.** If something is playing elsewhere and reports to your server, Home offers to continue it here.
-- Play counts and scrobbling, which you can turn off.
+- **Separate quality for Wi-Fi, mobile data and Low Data Mode.** At home you get the original file; on data you get a smaller version by default. If a connection can't keep up, the app fetches a smaller copy so the music keeps playing, and gets the good one next time.
+- Lyrics, following along line by line if your server has them with timings, or word by word on Navidrome 0.63 and later with files that carry them.
+- Sleep timer, AirPlay, Lock Screen controls with a heart to favourite the song, and music that comes back by itself after a phone call or an alarm. Spoken directions from a navigation app can pause the music instead of talking over it.
+- **Pick up where another device left off.** If something is playing elsewhere and reports to your server, Home offers to continue it here, songs you queued included.
+- **Jams**: listen together with people nearby, over Wi-Fi or Bluetooth. Guests join with a code, add songs and skip, while the music plays on the host's phone.
+- **Siri and Shortcuts**: ask Siri to play a song, album, artist, playlist, genre or show, and build automations from more than twenty actions. See [What these builds can't do](#what-these-builds-cant-do) first.
+- Play counts and scrobbling, which you can turn off, and a choice of how far into a song a play counts.
+- **Last.fm mixes**: with your own Last.fm API key, Home gets Made For You mixes and Similar Artists shelves built from your own library.
 
 ### Downloads and storage
 
@@ -58,15 +76,21 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 - A Downloaded screen showing kept albums, everything else on the phone, and what's still waiting to arrive -- you can cancel one or all of them.
 - Every song shows where it stands: queued, downloading, kept, or just cached.
 
+### Your server
+
+- A **local address** next to the public one, so at home the app talks to your server over your own network. Switching between them never interrupts what's playing.
+- Custom headers and **client certificates** (.p12/.pfx), if your server sits behind something that needs them. Headers can be changed later in Settings > Server without signing out.
+- A dot on the server card that says whether your server is answering, and a way to check on demand.
+
 ### Look and feel
 
 - Apple's Liquid Glass on the tab bar, mini player and search field, with plain content behind it. The mini player grows into the full player rather than opening a new screen.
 - Light, dark or automatic, six accent colours, English, German, Spanish, Italian and French. All of them are set inside the app, so they work the same whether it is installed on the device or running in something like LiveContainer.
-- Left-handed mode, which mirrors the buttons on album, artist and playlist screens.
-- A small pixel-art companion on the mini player. On by default, and switchable off in Settings → Pets.
-- Custom login headers, if your server sits behind something that needs one.
+- **iCloud settings sync** keeps your settings and the songs you marked Don't Suggest the same on all your devices, and you choose which of them sync (Settings > Integrations > iCloud; see [What these builds can't do](#what-these-builds-cant-do)).
+- Left-handed mode, which mirrors the buttons on album, artist and playlist screens and moves the A to Z strip to the left.
+- Works with VoiceOver, larger text sizes and Reduce Motion.
+- A small pixel-art companion on the mini player. On by default, and switchable off in Settings > Pets.
 - A log viewer in the app, with crash and hang reports, so a problem can be reported with something attached to it.
-- A dot on the server card that says whether your server is answering, and a way to check on demand.
 
 ## FAQ -- design decisions
 
@@ -92,7 +116,7 @@ The song you're actually listening to comes first, which is why nothing else is 
 
 ### Why is gapless playback only sometimes gapless?
 
-Joining two songs with no gap only works if the app knows exactly where the music starts and ends in each file. Your server's original files carry that, and so does Opus. Other conversions throw it away, and a join based on a guess is heard as a click. Where a clean join isn't possible, you get the crossfade instead.
+Joining two songs with no gap only works if the app knows exactly where the music starts and ends in each file. Your server's original files carry that, and so do Opus and MP3. AAC doesn't: every AAC file starts with a moment of silence it doesn't say the length of, so AAC songs still run into each other but with a short tick at the join. For an album that has to play through without a mark, choose the original files or Opus.
 
 ### Why does Wi-Fi fetch the original file instead of a smaller one?
 
@@ -104,11 +128,11 @@ The app keeps a handful of songs around what you're listening to: the next two, 
 
 It's temporary -- it clears itself out and stays inside the storage limit in Settings. **Keep** is the other thing: a song, album or playlist you keep on purpose isn't part of that, isn't deleted on its own, and only goes when you remove it.
 
-### What is "Render (beta)", and why is it on?
+### What is "Render", and why is it on?
 
-It's how the app plays music now. The other way, "System", hands the file to iOS and lets it get on with it. Render plays the audio itself, which means it can put one song straight after another with genuinely nothing in between, and land exactly where you drop the progress bar.
+It's how the app plays music. The other way, "System", hands the file to iOS and lets it get on with it. Render plays the audio itself, whether the song is on the phone or still streaming, which means it can put one song straight after another with genuinely nothing in between, land exactly where you drop the progress bar, and run the equalizer and pitch control.
 
-It's marked beta because bits are still missing rather than because it breaks -- a few joins fall back to a small gap. It only takes songs already on the phone; anything still arriving over the network plays on System regardless. If it doesn't suit you, the switch is at the top of Playback settings and you can go back at any time.
+Podcast episodes are the exception: they always play on System, so the equalizer and pitch don't apply to them. If Render doesn't suit you, the switch is at the top of Playback settings and you can go back at any time.
 
 ### Why did the quality drop in the middle of a song?
 
@@ -116,14 +140,10 @@ Because the alternative is music that stutters, or never starts. If a connection
 
 You can turn this off in Playback settings. Then you always get exactly the quality you chose -- which on a bad connection can mean a long wait, or nothing.
 
-### Why can I see AAC in the format list but not choose it?
-
-Because it doesn't work properly here: every song comes out with a fraction of a second of silence at the start, and no join across that can be clean. The row is left visible but greyed out so the answer to "where did AAC go?" is on screen instead of missing.
-
 ### Why does my library have to download before I can browse it?
 
 So browsing doesn't wait on your server every time you open a screen -- and works with no connection at all. It's built once, kept on the phone, and topped up when the app starts. The first build takes a while on a big collection, but you can browse while it runs.
 
 ### Why do podcasts behave differently from music?
 
-Episodes are streamed and not kept: nothing is downloaded ahead, and nothing stays on the phone afterwards. Downloading an hour-long episode before starting it would mean a long wait for nothing, so episodes stream even on a connection too slow for music. Jumping around inside one asks your server and lands straight away.
+Episodes are streamed and not kept: nothing is downloaded ahead, and nothing stays on the phone afterwards. Downloading an hour-long episode before starting it would mean a long wait for nothing, so episodes stream even on a connection too slow for music. Jumping around inside one asks your server and lands straight away, and where you stopped is remembered so you can carry on later.

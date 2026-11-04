@@ -2,6 +2,58 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-04
+
+- Syncing your library is much faster and easier on the battery, and the bigger the library the bigger the difference.
+
+- Shortcuts actions no longer show a box like "Shuffling 300 songs" every time they run. They only speak up when something goes wrong.
+
+- Asking Siri to play something on SwiftDrome now plays it, instead of Siri saying the app doesn't support that. There is nothing to turn on, so the Siri & Shortcuts screen in Settings, which wrongly said Siri was unavailable, is gone.
+
+- Settings > Integrations > iCloud: keep your settings and the songs you marked Don't Suggest the same on all your devices, choosing which groups to sync.
+
+- A song the server refuses to send is no longer marked as downloaded and left unplayable. It can be downloaded again once the server sends it.
+
+- Shuffle now shuffles a playlist, an artist or a decade that happens to hold a podcast episode. A show's own episodes still play in release order.
+
+- A part-heard podcast episode now carries on where it stopped wherever you start it: the Downloaded screen, a playlist, Favorites, the queue or Siri, not only its show's screen.
+
+- With "Hide duplicate songs" on, a decade now lists every movement or part of a work instead of folding them into one row.
+
+- Play Next and Play Last on a whole record no longer freeze the app, however many songs it holds: a decade of thousands of songs now queues at once.
+
+- Seeking forward in a streamed song no longer leaves it silent when the connection goes bad: the spinner appears, and the song is asked for again at a quality the connection can carry.
+
+- Keeping an album now downloads its tracks over one connection instead of starting a fresh one for every track, and a download left running by a force quit no longer goes on spending mobile data.
+
+- Siri now says why it could not play something: it is not in your library, you have heard every episode, or you need to sign in. Its replies no longer repeat the app's name.
+
+- VoiceOver now names the Downloads and Settings buttons in the top bar, and a bar too narrow to hold them both moves one into a menu instead of squeezing it.
+
+- VoiceOver and Switch Control can now reorder your queue: each song offers Move Up, Move Down, Move to Top and Move to Bottom, and says where it landed.
+
+- The sign-in screen now asks only for the server, your name and your password, with the local address, headers and certificate under Advanced, and a failed sign-in says what to change under the field it is about.
+
+- Long-pressing a cover now opens the same menu everywhere, including on an artist's page, Library's Recently Added, search results and the Made For You mixes, and long-pressing an artist offers Play, Shuffle and Favorite.
+
+- Songs, Artists, Albums and Playlists now have a search field: pull the list down and type to narrow it in place.
+
+- Genres and a genre's albums no longer draw an arrow at the end of each row, where the A-to-Z strip sat on top of it.
+
+- With Left-Handed Controls on, song titles read from the left again, and only the row's number, badge and duration move to the other hand.
+
+- A screen that cannot load now says so where it happened, with a Try Again button, and Home shows a line while the server is not answering. Empty Home, Favorites and Kept screens now say how to fill them.
+
+- Songs on an album now show their guests under the title, like "feat. JAY-Z", and each song on a compilation shows its own artist.
+
+- A listen mix's own screen now shows a shorter Last.fm credit in larger, easier to read text.
+
+- Library > Playlists has its title back, is sorted A to Z, and has the letter strip to jump through it.
+
+- The iPhone stays upright again; only iPad turns sideways.
+
+- Go to Artist on an album, a playlist or Now Playing now offers every artist on it, including guests and the second artist of a duo release like "Calvin Harris & Rag'n'Bone Man".
+
 ## [1.0.0] - 2026-11-02
 
 - Animated album covers now start moving a second or two after a song starts, in the app and on the Lock Screen, and no longer fill your storage: only the last two are kept. A new switch lets them load over cellular.
@@ -15,6 +67,8 @@
 - Connecting to a car or other Bluetooth stereo no longer switches repeat or shuffle on by itself.
 
 - During a podcast episode, the next and previous buttons on a car or Bluetooth headset now jump 15 seconds forward or back instead of changing episode.
+
+- Podcast episodes now always play on the System engine, so skipping 15 seconds no longer switches players mid-episode. The equalizer and pitch control do not apply to episodes.
 
 ## [0.49.0] - 2026-10-17
 
