@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-05
+
+- Genre radio: start a station from a genre that keeps playing songs from that genre, and save what it played as a playlist.
+
+- Generate a playlist from genres, decades or artists, picking its length and how familiar it should be, then play it or save it to your server.
+
+- Create a playlist by hand: name it, search for songs to add, and choose whether it's private or public.
+
+- Rename your playlists from the pencil next to their title.
+
+- The Genres list and each genre's albums now have the same pull-down search as Albums and Artists.
+
+- The app speaks Russian: pick Русский under Settings > Appearance > Language, or set your phone to Russian.
+
+- With Reduce Motion on, the Pets screen now says why the pet is hidden, and a new toggle there brings it back without turning Reduce Motion off.
+
 ## [1.1.0] - 2026-11-04
 
 - Syncing your library is much faster and easier on the battery, and the bigger the library the bigger the difference.

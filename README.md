@@ -85,7 +85,7 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 ### Look and feel
 
 - Apple's Liquid Glass on the tab bar, mini player and search field, with plain content behind it. The mini player grows into the full player rather than opening a new screen.
-- Light, dark or automatic, six accent colours, English, German, Spanish, Italian and French. All of them are set inside the app, so they work the same whether it is installed on the device or running in something like LiveContainer.
+- Light, dark or automatic, six accent colours, English, German, Spanish, Italian, French and Russian. All of them are set inside the app, so they work the same whether it is installed on the device or running in something like LiveContainer.
 - **iCloud settings sync** keeps your settings and the songs you marked Don't Suggest the same on all your devices, and you choose which of them sync (Settings > Integrations > iCloud; see [What these builds can't do](#what-these-builds-cant-do)).
 - Left-handed mode, which mirrors the buttons on album, artist and playlist screens and moves the A to Z strip to the left.
 - Works with VoiceOver, larger text sizes and Reduce Motion.
