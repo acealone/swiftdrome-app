@@ -31,6 +31,10 @@ A few features depend on how the app is built and signed rather than on the app 
 
 See [CHANGELOG.md](CHANGELOG.md) for release history.
 
+## Support the project
+
+If you enjoy SwiftDrome, you can [buy me a coffee](https://buymeacoffee.com/acealone). It's entirely optional: every feature works the same either way.
+
 ## What the app does
 
 ### Your library
