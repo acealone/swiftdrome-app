@@ -2,6 +2,38 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-20
+
+- The playlist generator can pick songs by mood, if your music is tagged with one.
+
+- Confirmation popups, like Rebuild Index and Sign Out, now appear centered on the screen and look the same everywhere.
+
+- The download icon in the top bar now follows your text size and Bold Text.
+
+- The hint on the Jam sheet no longer splits Settings > Server across two lines.
+
+- Long-press a playlist for its actions, or tap the pen on its page to rename it, add or remove songs, drag them into a new order or delete it. Playlists also show who made them.
+
+- Songs now has an alphabet strip for jumping through your library, and Songs, Artists, Albums and Genres have a headline like Podcasts.
+
+- Settings > Server > Account: change your name and password, and your username if you're an admin. Jams use your name unless you turn on a different one there.
+
+- While your library indexes, the Settings gear becomes the spinner: tap it to open Settings, long-press it to cancel.
+
+- The indexing bar in Settings now shows steady progress across all songs, albums, artists and playlists, instead of jumping ahead and stalling near the end.
+
+- Messages now appear above the keyboard, clear of the search field, and the playlist sheets show theirs instead of hiding them behind the sheet.
+
+- Buy me a coffee has moved out of Settings to the website and the GitHub page.
+
+- Starting a radio or genre radio from the song you're listening to now keeps it playing instead of skipping it.
+
+- Admins can open other people's playlists in the edit screen, read-only, and delete them from there or from the Playlists long press.
+
+- ListenBrainz: connect it under Settings > Integrations for listener counts, radio, decade rankings, mixes and your Daily and Weekly playlists, alongside or instead of Last.fm, and pick which service each one uses.
+
+- Lidarr: request albums your library doesn't have yet from the artist page or Search, and follow them in Library · Requests and Downloaded until they arrive. Others on your server can ask too: admins approve right from the notification, or, with approval off, you're notified as each request goes to Lidarr.
+
 ## [1.2.0] - 2026-11-05
 
 - Genre radio: start a station from a genre that keeps playing songs from that genre, and save what it played as a playlist.
