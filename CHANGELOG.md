@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-11-23
+
+- Jams: guests without the app can scan the QR code on the host's Jam screen and join instantly through an App Clip, no download, server or code needed.
+
+- Skipping songs no longer flashes an empty placeholder on the lock screen, and an animated cover keeps playing when the next song is from the same album.
+
+- On iOS 27 the search field is shown as soon as you open Search, and the keyboard no longer hides the last search results.
+
+- Podcast episodes now always play in their original quality, so episodes no longer jump back and repeat words while you listen.
+
 ## [1.3.0] - 2026-11-20
 
 - The playlist generator can pick songs by mood, if your music is tagged with one.
