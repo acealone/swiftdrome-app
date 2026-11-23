@@ -17,12 +17,20 @@
       "iconURL": "https://raw.githubusercontent.com/acealone/swiftdrome-app/main/assets/icon.png",
       "tintColor": "0a84ff",
       "category": "Music",
-      "version": "1.3.0",
-      "versionDate": "2026-11-20T15:50:50Z",
-      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v1.3.0/SwiftDrome.ipa",
-      "versionDescription": "- The playlist generator can pick songs by mood, if your music is tagged with one.\n\n- Confirmation popups, like Rebuild Index and Sign Out, now appear centered on the screen and look the same everywhere.\n\n- The download icon in the top bar now follows your text size and Bold Text.\n\n- The hint on the Jam sheet no longer splits Settings > Server across two lines.\n\n- Long-press a playlist for its actions, or tap the pen on its page to rename it, add or remove songs, drag them into a new order or delete it. Playlists also show who made them.\n\n- Songs now has an alphabet strip for jumping through your library, and Songs, Artists, Albums and Genres have a headline like Podcasts.\n\n- Settings > Server > Account: change your name and password, and your username if you're an admin. Jams use your name unless you turn on a different one there.\n\n- While your library indexes, the Settings gear becomes the spinner: tap it to open Settings, long-press it to cancel.\n\n- The indexing bar in Settings now shows steady progress across all songs, albums, artists and playlists, instead of jumping ahead and stalling near the end.\n\n- Messages now appear above the keyboard, clear of the search field, and the playlist sheets show theirs instead of hiding them behind the sheet.\n\n- Buy me a coffee has moved out of Settings to the website and the GitHub page.\n\n- Starting a radio or genre radio from the song you're listening to now keeps it playing instead of skipping it.\n\n- Admins can open other people's playlists in the edit screen, read-only, and delete them from there or from the Playlists long press.\n\n- ListenBrainz: connect it under Settings > Integrations for listener counts, radio, decade rankings, mixes and your Daily and Weekly playlists, alongside or instead of Last.fm, and pick which service each one uses.\n\n- Lidarr: request albums your library doesn't have yet from the artist page or Search, and follow them in Library · Requests and Downloaded until they arrive. Others on your server can ask too: admins approve right from the notification, or, with approval off, you're notified as each request goes to Lidarr.",
-      "size": 30630103,
+      "version": "1.4.0",
+      "versionDate": "2026-11-23T12:16:55Z",
+      "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v1.4.0/SwiftDrome.ipa",
+      "versionDescription": "- Jams: guests without the app can scan the QR code on the host's Jam screen and join instantly through an App Clip, no download, server or code needed.\n\n- Skipping songs no longer flashes an empty placeholder on the lock screen, and an animated cover keeps playing when the next song is from the same album.\n\n- On iOS 27 the search field is shown as soon as you open Search, and the keyboard no longer hides the last search results.\n\n- Podcast episodes now always play in their original quality, so episodes no longer jump back and repeat words while you listen.",
+      "size": 30878255,
       "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2026-11-23T12:16:55Z",
+          "downloadURL": "https://github.com/acealone/swiftdrome-app/releases/download/v1.4.0/SwiftDrome.ipa",
+          "size": 30878255,
+          "localizedDescription": "- Jams: guests without the app can scan the QR code on the host's Jam screen and join instantly through an App Clip, no download, server or code needed.\n\n- Skipping songs no longer flashes an empty placeholder on the lock screen, and an animated cover keeps playing when the next song is from the same album.\n\n- On iOS 27 the search field is shown as soon as you open Search, and the keyboard no longer hides the last search results.\n\n- Podcast episodes now always play in their original quality, so episodes no longer jump back and repeat words while you listen.",
+          "minOSVersion": "26.0"
+        },
         {
           "version": "1.3.0",
           "date": "2026-11-20T15:50:50Z",
